@@ -1,0 +1,6 @@
+*~
+.DS_Store
+NDMVVM.xcodeproj/project.xcworkspace/xcuserdata/**
+NDMVVM.xcodeproj/xcuserdata/**
+NDMVVM.xcworkspace/xcuserdata/**
+Pods/Pods.xcodeproj/xcuserdata/**

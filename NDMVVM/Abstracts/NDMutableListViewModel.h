@@ -1,0 +1,28 @@
+//
+//  NDMutableListViewModel.h
+//  NDMVVM
+//
+//  Created by Nguyen Duc Hiep on 3/13/20.
+//  Copyright © 2020 Neodata Co., Ltd. All rights reserved.
+//
+
+#import <NDMVVM/NDMVVM.h>
+
+NS_ASSUME_NONNULL_BEGIN
+
+NS_SWIFT_NAME(NDMutableListViewModelProtocol)
+@protocol NDMutableListViewModel<NDListViewModel>
+
+@property (nonatomic, strong) NSArray<__kindof id<NDItemViewModel>>* itemViewModels;
+
+- (void)insertItemViewModel:(__kindof id<NDItemViewModel>)itemViewModel
+                    atItem:(NSInteger)item;
+- (void)replaceItemViewModel:(__kindof id<NDItemViewModel>)itemViewModel
+                     atItem:(NSInteger)item;
+- (void)deleteItemViewModelAtItem:(NSInteger)item;
+- (void)batchUpdate:(void (^)())update;
+
+@end
+
+NS_ASSUME_NONNULL_END
+

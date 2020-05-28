@@ -1,0 +1,27 @@
+PODS:
+  - NDLog (0.0.1)
+  - NDManualObject (0.0.1):
+    - NDManualObject/Abstracts (= 0.0.1)
+    - NDManualObject/Objects (= 0.0.1)
+    - NDManualObject/Utils (= 0.0.1)
+  - NDManualObject/Abstracts (0.0.1)
+  - NDManualObject/Objects (0.0.1)
+  - NDManualObject/Utils (0.0.1)
+
+DEPENDENCIES:
+  - NDLog (from `/Users/hiep.nd/Google Drive/github/NDLog`)
+  - NDManualObject (from `/Users/hiep.nd/Google Drive/github/NDManualObject`)
+
+EXTERNAL SOURCES:
+  NDLog:
+    :path: "/Users/hiep.nd/Google Drive/github/NDLog"
+  NDManualObject:
+    :path: "/Users/hiep.nd/Google Drive/github/NDManualObject"
+
+SPEC CHECKSUMS:
+  NDLog: 06228aa2828ff6c06eb0d7c773eb2881dd1d71ef
+  NDManualObject: 9bb6bcc2ecffc7064fc964f51e019b9b083fa8f2
+
+PODFILE CHECKSUM: df5a47be1311a03c2e046d4b915710f0b8b4a72c
+
+COCOAPODS: 1.9.1

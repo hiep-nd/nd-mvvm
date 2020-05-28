@@ -1,0 +1,44 @@
+{
+  "name": "NDManualObject",
+  "version": "0.0.1",
+  "summary": "Support create object by code instead of IB.",
+  "description": "NDManualObject is a small framework that support create object by code instead of IB.",
+  "homepage": "https://github.com/hiep-nd/nd-manual-object.git",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "Nguyen Duc Hiep": "hiep.nd@gmail.com"
+  },
+  "platforms": {
+    "ios": "9.0",
+    "tvos": "9.0"
+  },
+  "swift_versions": [
+    "4.0",
+    "5.1",
+    "5.2"
+  ],
+  "source": {
+    "git": "https://github.com/hiep-nd/nd-manual-object.git",
+    "tag": "Pod-0.0.1"
+  },
+  "source_files": "NDManualObject/**/*.{h,m,mm,swift}",
+  "header_mappings_dir": "NDManualObject",
+  "subspecs": [
+    {
+      "name": "Abstracts",
+      "source_files": "NDManualObject/Abstracts/*.{h,m,mm,swift}"
+    },
+    {
+      "name": "Objects",
+      "source_files": "NDManualObject/Objects/*.{h,m,mm,swift}"
+    },
+    {
+      "name": "Utils",
+      "source_files": "NDManualObject/Utils/*.{h,m,mm,swift}"
+    }
+  ],
+  "swift_version": "5.2"
+}

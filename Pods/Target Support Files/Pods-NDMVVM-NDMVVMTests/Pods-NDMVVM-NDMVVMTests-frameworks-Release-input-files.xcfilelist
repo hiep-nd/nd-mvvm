@@ -1,0 +1,3 @@
+${PODS_ROOT}/Target Support Files/Pods-NDMVVM-NDMVVMTests/Pods-NDMVVM-NDMVVMTests-frameworks.sh
+${BUILT_PRODUCTS_DIR}/NDLog/NDLog.framework
+${BUILT_PRODUCTS_DIR}/NDManualObject/NDManualObject.framework
