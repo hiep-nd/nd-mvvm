@@ -1,43 +1,26 @@
 //
 //  NDTableViewController.mm
-//  Mode-View-ViewModel-ObjC
+//  NDMVVM
 //
 //  Created by Nguyen Duc Hiep on 12/6/19.
-//  Copyright © 2019 Neodata Co., Ltd. All rights reserved.
+//  Copyright © 2019 Nguyen Duc Hiep. All rights reserved.
 //
 
-#import "NDMVVM/Views/NDTableViewController.h"
+#import <NDMVVM/Views/NDTableViewController.h>
 
-#import "NDMVVM/Abstracts/NDItemViewModel.h"
-#import "NDMVVM/Abstracts/NDListViewModel.h"
-#import "NDMVVM/Views/NDTableViewCell.h"
-#import "NDMVVM/Privates/NDUtils.h"
+#import <NDMVVM/Abstracts/NDItemViewModel.h>
+#import <NDMVVM/Abstracts/NDListViewModel.h>
+#import <NDMVVM/Views/NDTableViewCell.h>
 
 #import <NDLog/NDLog.h>
+
+#import "../Privates/NDUtils.h"
 
 using namespace nd;
 
 @implementation NDTableViewController
 
-- (void)registerClass:(Class)cls identifier:(NSString*)identifier {
-  [self.tableView registerClass:cls forCellReuseIdentifier:identifier];
-}
-
-- (void)registerNibName:(NSString*)nibName identifier:(NSString*)identifier {
-  [self.tableView registerNib:[UINib nibWithNibName:nibName bundle:nil]
-       forCellReuseIdentifier:identifier];
-}
-
-// MARK:- NDManualTableViewController
-
-- (void)viewDidLoad {
-  [super viewDidLoad];
-
-  if (self.loadHandler) {
-    self.loadHandler(self);
-    self.loadHandler = nil;
-  }
-}
+// MARK: - NDManualTableViewController
 
 - (NSInteger)tableView:(UITableView*)tableView
     numberOfRowsInSection:(NSInteger)section {
@@ -54,7 +37,7 @@ using namespace nd;
   return cell;
 }
 
-// MARK:- NDListView
+// MARK: - NDListView
 @synthesize viewModel = _viewModel;
 
 NDView_ViewModel_Setter_Default_Impl;
@@ -67,12 +50,8 @@ NDView_ViewModel_Setter_Default_Impl;
   [self.tableView reloadData];
 }
 
-// MARK:- Privates
+// MARK: - Privates
 
-namespace {
-inline id<NDListViewModel> ViewModel(id<NDView> self) {
-  return self.viewModel;
-}
-}
+ViewModel_Default_Impl(NDListViewModel);
 
 @end

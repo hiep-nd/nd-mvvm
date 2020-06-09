@@ -3,17 +3,17 @@
 //  NDMVVM
 //
 //  Created by Nguyen Duc Hiep on 4/24/20.
-//  Copyright © 2020 Neodata Co., Ltd. All rights reserved.
+//  Copyright © 2020 Nguyen Duc Hiep. All rights reserved.
 //
 
-#import "NDMVVM/ViewModels/NDListViewModel.h"
+#import <NDMVVM/ViewModels/NDListViewModel.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface NDListViewModel ()
 
 @property(nonatomic, strong)
-    NSArray<__kindof id<NDItemViewModel>> *itemViewModels;
+    NSArray<__kindof id<NDItemViewModel>>* itemViewModels;
 
 @end
 

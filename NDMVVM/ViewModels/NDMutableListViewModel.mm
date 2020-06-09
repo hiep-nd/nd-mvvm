@@ -3,12 +3,13 @@
 //  NDMVVM
 //
 //  Created by Nguyen Duc Hiep on 4/24/20.
-//  Copyright © 2020 Neodata Co., Ltd. All rights reserved.
+//  Copyright © 2020 Nguyen Duc Hiep. All rights reserved.
 //
 
-#import "NDMVVM/ViewModels/NDMutableListViewModel.h"
+#import <NDMVVM/ViewModels/NDMutableListViewModel.h>
 
-#import "NDMVVM/ViewModels/NDListViewModel+Protected.h"
+#import <NDMVVM/Abstracts/NDMutableListView.h>
+#import <NDMVVM/ViewModels/NDListViewModel+Protected.h>
 
 @implementation NDMutableListViewModel
 
@@ -17,7 +18,7 @@
 @dynamic itemViewModels;
 
 - (void)setItemViewModels:
-    (NSArray<__kindof id<NDItemViewModel>> *)itemViewModels {
+    (NSArray<__kindof id<NDItemViewModel>>*)itemViewModels {
   super.itemViewModels = [[NSMutableArray alloc] initWithArray:itemViewModels];
   [View(self) reloadAll];
 }
@@ -55,14 +56,16 @@
          [view conformsToProtocol:@protocol(NDMutableListView)];
 }
 
-// MARK:- Privates
+// MARK: - Privates
 
 namespace {
-inline id<NDMutableListView> View(id<NDViewModel> self) { return self.view; }
+inline id<NDMutableListView> View(id<NDViewModel> self) {
+  return self.view;
+}
 
-inline NSMutableArray<__kindof id<NDItemViewModel>> *
-ItemViewModels(id<NDMutableListViewModel> self) {
-  return (NSMutableArray *)self.itemViewModels;
+inline NSMutableArray<__kindof id<NDItemViewModel>>* ItemViewModels(
+    id<NDMutableListViewModel> self) {
+  return (NSMutableArray*)self.itemViewModels;
 }
 }
 

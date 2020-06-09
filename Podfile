@@ -12,7 +12,7 @@ target 'NDMVVM' do
   #  pod 'NDAutolayoutUtil', :git => 'https://github.com/hiep-nd/nd-manual-object.git'
   #    pod 'NDAutolayoutUtil'
   
-  pod 'NDManualObject', :path => '/Users/hiep.nd/Google Drive/github/NDManualObject'
+  pod 'NDManualObjects', :path => '/Users/hiep.nd/Google Drive/github/NDManualObjects'
   #  pod 'NDManualObject', :git => 'https://github.com/hiep-nd/nd-manual-object.git'
   #  pod 'NDManualObject'
   

@@ -1,10 +1,8 @@
-EMBEDDED_CONTENT_CONTAINS_SWIFT = YES
-FRAMEWORK_SEARCH_PATHS = $(inherited) "${PODS_CONFIGURATION_BUILD_DIR}/NDLog" "${PODS_CONFIGURATION_BUILD_DIR}/NDManualObject"
+FRAMEWORK_SEARCH_PATHS = $(inherited) "${PODS_CONFIGURATION_BUILD_DIR}/NDLog" "${PODS_CONFIGURATION_BUILD_DIR}/NDManualObjects"
 GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
-HEADER_SEARCH_PATHS = $(inherited) "${PODS_CONFIGURATION_BUILD_DIR}/NDLog/NDLog.framework/Headers" "${PODS_CONFIGURATION_BUILD_DIR}/NDManualObject/NDManualObject.framework/Headers"
+HEADER_SEARCH_PATHS = $(inherited) "${PODS_CONFIGURATION_BUILD_DIR}/NDLog/NDLog.framework/Headers" "${PODS_CONFIGURATION_BUILD_DIR}/NDManualObjects/NDManualObjects.framework/Headers"
 LD_RUNPATH_SEARCH_PATHS = $(inherited) '@executable_path/Frameworks' '@loader_path/Frameworks'
-OTHER_LDFLAGS = $(inherited) -framework "NDLog" -framework "NDManualObject"
-OTHER_SWIFT_FLAGS = $(inherited) -D COCOAPODS
+OTHER_LDFLAGS = $(inherited) -framework "NDLog" -framework "NDManualObjects"
 PODS_BUILD_DIR = ${BUILD_DIR}
 PODS_CONFIGURATION_BUILD_DIR = ${PODS_BUILD_DIR}/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)
 PODS_PODFILE_DIR_PATH = ${SRCROOT}/.

@@ -3,7 +3,7 @@
 //  NDMVVM
 //
 //  Created by Nguyen Duc Hiep on 4/26/20.
-//  Copyright © 2020 Neodata Co., Ltd. All rights reserved.
+//  Copyright © 2020 Nguyen Duc Hiep. All rights reserved.
 //
 
 #import <NDMVVM/Views/NDTableViewController.h>
@@ -12,7 +12,8 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface NDMutableTableViewController : NDTableViewController<NDMutableListView>
+@interface NDMutableTableViewController
+    : NDTableViewController <NDMutableListView>
 @end
 
 NS_ASSUME_NONNULL_END

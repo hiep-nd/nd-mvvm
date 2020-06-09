@@ -3,10 +3,10 @@
 //  NDMVVM
 //
 //  Created by Nguyen Duc Hiep on 3/5/20.
-//  Copyright © 2020 Neodata Co., Ltd. All rights reserved.
+//  Copyright © 2020 Nguyen Duc Hiep. All rights reserved.
 //
 
-#import "NDMVVM/Views/NDViewWrapperViewController.h"
+#import <NDMVVM/Views/NDViewWrapperViewController.h>
 
 @interface NDViewWrapperViewController ()
 
@@ -14,7 +14,7 @@
 
 @implementation NDViewWrapperViewController
 
-// MARK:- NDViewController
+// MARK: - NDViewController
 
 - (void)loadView {
   [super loadView];

@@ -3,7 +3,7 @@
 //  NDMVVM
 //
 //  Created by Nguyen Duc Hiep on 12/13/19.
-//  Copyright © 2019 Neodata Co., Ltd. All rights reserved.
+//  Copyright © 2019 Nguyen Duc Hiep. All rights reserved.
 //
 
 #import <NDMVVM/Views/NDTableViewController.h>

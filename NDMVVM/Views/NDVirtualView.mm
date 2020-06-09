@@ -3,16 +3,16 @@
 //  NDMVVM
 //
 //  Created by Nguyen Duc Hiep on 5/5/20.
-//  Copyright © 2020 Neodata Co., Ltd. All rights reserved.
+//  Copyright © 2020 Nguyen Duc Hiep. All rights reserved.
 //
 
-#import "NDMVVM/Views/NDVirtualView.h"
+#import <NDMVVM/Views/NDVirtualView.h>
 
-#import "NDMVVM/Privates/NDUtils.h"
+#import "../Privates/NDUtils.h"
 
 @implementation NDVirtualView
 
-// MARK:- NDView
+// MARK: - NDView
 NDView_Default_Impl;
 
 @end

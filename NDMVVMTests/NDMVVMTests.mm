@@ -3,7 +3,7 @@
 //  NDMVVMTests
 //
 //  Created by Nguyen Duc Hiep on 1/21/20.
-//  Copyright © 2020 Neodata Co., Ltd. All rights reserved.
+//  Copyright © 2020 Nguyen Duc Hiep. All rights reserved.
 //
 
 #import <XCTest/XCTest.h>
@@ -21,7 +21,7 @@
   auto viewModel = [[NDViewModel alloc] init];
   @try {
     NDRoute(viewModel, view);
-  } @catch (NSException *exception) {
+  } @catch (NSException* exception) {
     XCTAssertNotNil(exception);
   } @finally {
     XCTAssertNil(viewModel.view);

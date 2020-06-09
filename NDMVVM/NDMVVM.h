@@ -3,7 +3,7 @@
 //  NDMVVM
 //
 //  Created by Nguyen Duc Hiep on 1/21/20.
-//  Copyright © 2020 Neodata Co., Ltd. All rights reserved.
+//  Copyright © 2020 Nguyen Duc Hiep. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
@@ -31,11 +31,19 @@ FOUNDATION_EXPORT const unsigned char NDMVVMVersionString[];
 #import <NDMVVM/ViewModels/NDSingleSubItemViewModel.h>
 #import <NDMVVM/ViewModels/NDViewModel.h>
 
+#import <NDMVVM/Views/NDCollectionViewCell.h>
+#import <NDMVVM/Views/NDCollectionViewController.h>
+#import <NDMVVM/Views/NDMutableCollectionViewController.h>
+#import <NDMVVM/Views/NDSelectableCollectionViewController.h>
+#import <NDMVVM/Views/NDSelectableMutableCollectionViewController.h>
+
 #import <NDMVVM/Views/NDMutableTableViewController.h>
+#import <NDMVVM/Views/NDSelectableMutableTableViewController.h>
 #import <NDMVVM/Views/NDSelectableTableViewController.h>
-#import <NDMVVM/Views/NDTabBarController.h>
 #import <NDMVVM/Views/NDTableViewCell.h>
 #import <NDMVVM/Views/NDTableViewController.h>
+
+#import <NDMVVM/Views/NDTabBarController.h>
 #import <NDMVVM/Views/NDView.h>
 #import <NDMVVM/Views/NDViewController.h>
 #import <NDMVVM/Views/NDViewWrapperViewController.h>

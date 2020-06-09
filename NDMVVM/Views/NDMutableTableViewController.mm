@@ -3,16 +3,16 @@
 //  NDMVVM
 //
 //  Created by Nguyen Duc Hiep on 4/26/20.
-//  Copyright © 2020 Neodata Co., Ltd. All rights reserved.
+//  Copyright © 2020 Nguyen Duc Hiep. All rights reserved.
 //
 
-#import "NDMVVM/Views/NDMutableTableViewController.h"
+#import <NDMVVM/Views/NDMutableTableViewController.h>
 
 @protocol NDMutableListViewModel;
 
 @implementation NDMutableTableViewController
 
-// MARK:- NDMutableListView
+// MARK: - NDMutableListView
 
 - (void)batchUpdate:(nonnull void (^)())update {
   if (@available(iOS 11, tvOS 11, *)) {
@@ -27,15 +27,15 @@
 }
 
 - (void)deleteItem:(NSInteger)item {
-  [self.tableView
-      deleteRowsAtIndexPaths:@[ [NSIndexPath indexPathForRow:item inSection:0] ]
-            withRowAnimation:UITableViewRowAnimationAutomatic];
+  [self.tableView deleteRowsAtIndexPaths:@[ [NSIndexPath indexPathForRow:item
+                                                               inSection:0] ]
+                        withRowAnimation:UITableViewRowAnimationAutomatic];
 }
 
 - (void)insertItem:(NSInteger)item {
-  [self.tableView
-      insertRowsAtIndexPaths:@[ [NSIndexPath indexPathForRow:item inSection:0] ]
-            withRowAnimation:UITableViewRowAnimationAutomatic];
+  [self.tableView insertRowsAtIndexPaths:@[ [NSIndexPath indexPathForRow:item
+                                                               inSection:0] ]
+                        withRowAnimation:UITableViewRowAnimationAutomatic];
 }
 
 - (void)reloadAll {
@@ -44,14 +44,14 @@
 }
 
 - (void)updateItem:(NSInteger)item {
-  [self.tableView
-      reloadRowsAtIndexPaths:@[ [NSIndexPath indexPathForRow:item inSection:0] ]
-            withRowAnimation:UITableViewRowAnimationAutomatic];
+  [self.tableView reloadRowsAtIndexPaths:@[ [NSIndexPath indexPathForRow:item
+                                                               inSection:0] ]
+                        withRowAnimation:UITableViewRowAnimationAutomatic];
 }
 
 - (BOOL)validateViewModel:(__kindof id<NDViewModel>)viewModel {
-  return [super validateViewModel:viewModel]
-    && [viewModel conformsToProtocol:@protocol(NDMutableListViewModel)];
+  return [super validateViewModel:viewModel] &&
+         [viewModel conformsToProtocol:@protocol(NDMutableListViewModel)];
 }
 
 @end

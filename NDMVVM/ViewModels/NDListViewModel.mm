@@ -1,21 +1,21 @@
 //
 //  NDListViewModel.mm
-//  Mode-View-ViewModel-ObjC
+//  NDMVVM
 //
 //  Created by Nguyen Duc Hiep on 12/6/19.
-//  Copyright © 2019 Neodata Co., Ltd. All rights reserved.
+//  Copyright © 2019 Nguyen Duc Hiep. All rights reserved.
 //
 
-#import "NDMVVM/ViewModels/NDListViewModel+Protected.h"
+#import <NDMVVM/ViewModels/NDListViewModel+Protected.h>
 
-#import "NDMVVM/Abstracts/NDListViewModel.h"
+#import <NDMVVM/Abstracts/NDListViewModel.h>
 
 @protocol NDListView;
 
 @implementation NDListViewModel
 
 - (instancetype)initWithItemViewModels:
-    (NSArray<__kindof id<NDItemViewModel>> *)itemViewModels {
+    (NSArray<__kindof id<NDItemViewModel>>*)itemViewModels {
   self = [super init];
   if (self) {
     self.itemViewModels = itemViewModels;

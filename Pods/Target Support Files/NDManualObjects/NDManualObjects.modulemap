@@ -1,0 +1,6 @@
+framework module NDManualObjects {
+  umbrella header "NDManualObjects-umbrella.h"
+
+  export *
+  module * { export * }
+}

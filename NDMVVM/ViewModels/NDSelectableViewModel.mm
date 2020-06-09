@@ -1,12 +1,12 @@
 //
 //  NDSelectableViewModel.mm
-//  Mode-View-ViewModel-ObjC
+//  NDMVVM
 //
 //  Created by Nguyen Duc Hiep on 12/17/19.
-//  Copyright © 2019 Neodata Co., Ltd. All rights reserved.
+//  Copyright © 2019 Nguyen Duc Hiep. All rights reserved.
 //
 
-#import "NDMVVM/ViewModels/NDSelectableViewModel.h"
+#import <NDMVVM/ViewModels/NDSelectableViewModel.h>
 
 @implementation NDSelectableViewModel
 

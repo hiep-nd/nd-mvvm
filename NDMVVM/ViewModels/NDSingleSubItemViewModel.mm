@@ -1,12 +1,12 @@
 //
 //  NDSingleSubItemViewModel.mm
-//  Mode-View-ViewModel-ObjC
+//  NDMVVM
 //
 //  Created by Nguyen Duc Hiep on 12/13/19.
-//  Copyright © 2019 Neodata Co., Ltd. All rights reserved.
+//  Copyright © 2019 Nguyen Duc Hiep. All rights reserved.
 //
 
-#import "NDMVVM/ViewModels/NDSingleSubItemViewModel.h"
+#import <NDMVVM/ViewModels/NDSingleSubItemViewModel.h>
 
 @interface NDSingleSubItemViewModel ()
 
@@ -16,7 +16,7 @@
 
 @implementation NDSingleSubItemViewModel
 
-- (instancetype)initWithIdentifier:(NSString *)identifier
+- (instancetype)initWithIdentifier:(NSString*)identifier
                       subViewModel:(id<NDViewModel>)subViewModel {
   self = [super initWithIdentifier:identifier];
   if (self) {

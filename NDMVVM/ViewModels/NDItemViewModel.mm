@@ -1,22 +1,22 @@
 //
 //  NDItemViewModel.mm
-//  Mode-View-ViewModel-ObjC
+//  NDMVVM
 //
 //  Created by Nguyen Duc Hiep on 12/6/19.
-//  Copyright © 2019 Neodata Co., Ltd. All rights reserved.
+//  Copyright © 2019 Nguyen Duc Hiep. All rights reserved.
 //
 
-#import "NDMVVM/ViewModels/NDItemViewModel.h"
+#import <NDMVVM/ViewModels/NDItemViewModel.h>
 
 @interface NDItemViewModel ()
 
-@property(nonatomic, strong) NSString *identifier;
+@property(nonatomic, strong) NSString* identifier;
 
 @end
 
 @implementation NDItemViewModel
 
-- (instancetype)initWithIdentifier:(NSString *)identifier {
+- (instancetype)initWithIdentifier:(NSString*)identifier {
   self = [super init];
   if (self) {
     self.identifier = identifier ?: NSStringFromClass(self.class);

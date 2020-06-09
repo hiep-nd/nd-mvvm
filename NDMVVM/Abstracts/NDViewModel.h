@@ -3,7 +3,7 @@
 //  NDMVVM
 //
 //  Created by Nguyen Duc Hiep on 12/4/19.
-//  Copyright © 2019 Neodata Co., Ltd. All rights reserved.
+//  Copyright © 2019 Nguyen Duc Hiep. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
@@ -13,7 +13,7 @@ NS_ASSUME_NONNULL_BEGIN
 @protocol NDView;
 
 NS_SWIFT_NAME(NDViewModelProtocol)
-@protocol NDViewModel<NSObject>
+@protocol NDViewModel <NSObject>
 
 /**
  The view. Don't use the setter unless you have got strong reason, use the
@@ -35,6 +35,6 @@ NS_SWIFT_NAME(NDViewModelProtocol)
 FOUNDATION_EXPORT
 void NDRoute(__kindof id<NDViewModel> _Nullable viewModel,
              __kindof id<NDView> _Nullable view)
-  NS_SWIFT_NAME(route(viewModel:view:));
+    NS_SWIFT_NAME(nd_route(viewModel:view:));
 
 NS_ASSUME_NONNULL_END

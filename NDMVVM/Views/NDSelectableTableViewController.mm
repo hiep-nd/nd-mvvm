@@ -1,20 +1,22 @@
 //
 //  NDSelectableTableViewController.mm
-//  Mode-View-ViewModel-ObjC
+//  NDMVVM
 //
 //  Created by Nguyen Duc Hiep on 12/13/19.
-//  Copyright © 2019 Neodata Co., Ltd. All rights reserved.
+//  Copyright © 2019 Nguyen Duc Hiep. All rights reserved.
 //
 
-#import "NDMVVM/Views/NDSelectableTableViewController.h"
+#import <NDMVVM/Views/NDSelectableTableViewController.h>
 
-#import "NDMVVM/Abstracts/NDItemViewModel.h"
-#import "NDMVVM/Abstracts/NDListViewModel.h"
-#import "NDMVVM/Abstracts/NDSelectableViewModel.h"
+#import <NDMVVM/Abstracts/NDItemViewModel.h>
+#import <NDMVVM/Abstracts/NDListViewModel.h>
+#import <NDMVVM/Abstracts/NDSelectableViewModel.h>
+
+#import "../Privates/NDUtils.h"
 
 @implementation NDSelectableTableViewController
 
-#pragma mark - Table view data source
+// MARK: - NDTableViewController
 
 - (void)tableView:(UITableView*)tableView
     didSelectRowAtIndexPath:(NSIndexPath*)indexPath {
@@ -25,12 +27,8 @@
   }
 }
 
-// MARK:- Privates
+// MARK: - Privates
 
-namespace {
-inline id<NDListViewModel> ViewModel(id<NDView> self) {
-  return self.viewModel;
-}
-}
+ViewModel_Default_Impl(NDListViewModel);
 
 @end

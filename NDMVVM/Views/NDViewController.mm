@@ -1,20 +1,20 @@
 //
 //  NDViewController.mm
-//  Mode-View-ViewModel-ObjC
+//  NDMVVM
 //
 //  Created by Nguyen Duc Hiep on 12/4/19.
-//  Copyright © 2019 Neodata Co., Ltd. All rights reserved.
+//  Copyright © 2019 Nguyen Duc Hiep. All rights reserved.
 //
 
-#import "NDMVVM/Views/NDViewController.h"
+#import <NDMVVM/Views/NDViewController.h>
 
-#import "NDMVVM/Privates/NDUtils.h"
+#import "../Privates/NDUtils.h"
 
 using namespace nd;
 
 @implementation NDViewController
 
-// MARK:- NDManualViewController
+// MARK: - NDManualViewController
 
 - (void)viewDidLoad {
   [super viewDidLoad];
@@ -25,7 +25,7 @@ using namespace nd;
   }
 }
 
-// MARK:- NDView
+// MARK: - NDView
 NDView_Default_Impl;
 
 @end

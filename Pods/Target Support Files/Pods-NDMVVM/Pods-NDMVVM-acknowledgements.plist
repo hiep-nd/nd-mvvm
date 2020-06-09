@@ -70,7 +70,7 @@ SOFTWARE.
 			<key>License</key>
 			<string>MIT</string>
 			<key>Title</key>
-			<string>NDManualObject</string>
+			<string>NDManualObjects</string>
 			<key>Type</key>
 			<string>PSGroupSpecifier</string>
 		</dict>
