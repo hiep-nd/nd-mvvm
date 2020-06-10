@@ -13,7 +13,7 @@ NS_ASSUME_NONNULL_BEGIN
 @interface NDListViewModel ()
 
 @property(nonatomic, strong)
-    NSArray<__kindof id<NDItemViewModel>>* itemViewModels;
+    __kindof NSArray<__kindof id<NDItemViewModel>>* itemViewModels;
 
 @end
 

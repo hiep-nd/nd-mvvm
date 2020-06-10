@@ -1,0 +1,41 @@
+framework module NDMVVM {
+  umbrella header "NDMVVM.h"
+  
+  header "Abstracts/NDItemViewModel.h"
+  header "Abstracts/NDListView.h"
+  header "Abstracts/NDListViewModel.h"
+  header "Abstracts/NDMutableListView.h"
+  header "Abstracts/NDMutableListViewModel.h"
+  header "Abstracts/NDSelectableViewModel.h"
+  header "Abstracts/NDSingleSubViewModel.h"
+  header "Abstracts/NDView.h"
+  header "Abstracts/NDViewModel.h"
+
+  header "ViewModels/NDItemViewModel.h"
+  header "ViewModels/NDListViewModel.h"
+  header "ViewModels/NDMutableListViewModel.h"
+  header "ViewModels/NDSelectableViewModel.h"
+  header "ViewModels/NDSingleSubItemViewModel.h"
+  header "ViewModels/NDViewModel.h"
+
+  header "Views/NDCollectionViewCell.h"
+  header "Views/NDCollectionViewController.h"
+  header "Views/NDMutableCollectionViewController.h"
+  header "Views/NDSelectableCollectionViewController.h"
+  header "Views/NDSelectableMutableCollectionViewController.h"
+
+  header "Views/NDMutableTableViewController.h"
+  header "Views/NDSelectableMutableTableViewController.h"
+  header "Views/NDSelectableTableViewController.h"
+  header "Views/NDTableViewCell.h"
+  header "Views/NDTableViewController.h"
+
+  header "Views/NDTabBarController.h"
+  header "Views/NDView.h"
+  header "Views/NDViewController.h"
+  header "Views/NDViewWrapperViewController.h"
+  header "Views/NDVirtualView.h"
+
+  export *
+  module * { export * }
+}

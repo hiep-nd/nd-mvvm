@@ -1,6 +1,6 @@
 {
   "name": "NDManualObjects",
-  "version": "0.0.2",
+  "version": "0.0.4",
   "summary": "Support create object by code instead of IB.",
   "description": "NDManualObjects is a small framework that support create object by code instead of IB.",
   "homepage": "https://github.com/hiep-nd/nd-manual-objects.git",
@@ -23,25 +23,15 @@
   "requires_arc": true,
   "source": {
     "git": "https://github.com/hiep-nd/nd-manual-objects.git",
-    "tag": "Pod-0.0.2"
+    "tag": "Pod-0.0.4"
   },
-  "default_subspecs": "Core",
-  "subspecs": [
-    {
-      "name": "Core",
-      "source_files": "NDManualObjects/Core/**/*.{h,m,mm}",
-      "public_header_files": "NDManualObjects/Core/**/*.h",
-      "header_mappings_dir": "NDManualObjects/Core"
-    },
-    {
-      "name": "Swift",
-      "dependencies": {
-        "NDManualObjects/Core": [
-
-        ]
-      },
-      "source_files": "NDManualObjects/Swift/**/*.{swift}"
-    }
+  "source_files": "NDManualObjects/**/*.{h,m,mm}",
+  "public_header_files": "NDManualObjects/**/*.h",
+  "header_mappings_dir": "NDManualObjects",
+  "frameworks": [
+    "Foundation",
+    "UIKit"
   ],
+  "module_map": "NDManualObjects/NDManualObjects.modulemap",
   "swift_version": "5.2"
 }

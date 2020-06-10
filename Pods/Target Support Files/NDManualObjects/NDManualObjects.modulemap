@@ -1,5 +1,18 @@
 framework module NDManualObjects {
-  umbrella header "NDManualObjects-umbrella.h"
+  umbrella header "NDManualObjects.h"
+  
+  header "Abstracts/NDManualObject.h"
+
+  header "Objects/NDManualCollectionViewCell.h"
+  header "Objects/NDManualCollectionViewController.h"
+  header "Objects/NDManualObject.h"
+  header "Objects/NDManualTabBarController.h"
+  header "Objects/NDManualTableViewCell.h"
+  header "Objects/NDManualTableViewController.h"
+  header "Objects/NDManualView.h"
+  header "Objects/NDManualViewController.h"
+
+  header "Utils/UIView+NDManualObjects.h"
 
   export *
   module * { export * }

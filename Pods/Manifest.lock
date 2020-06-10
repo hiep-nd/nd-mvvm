@@ -2,9 +2,7 @@ PODS:
   - NDLog (0.0.2):
     - NDLog/Core (= 0.0.2)
   - NDLog/Core (0.0.2)
-  - NDManualObjects (0.0.2):
-    - NDManualObjects/Core (= 0.0.2)
-  - NDManualObjects/Core (0.0.2)
+  - NDManualObjects (0.0.4)
 
 DEPENDENCIES:
   - NDLog (from `/Users/hiep.nd/Google Drive/github/NDLog`)
@@ -18,7 +16,7 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   NDLog: f1495562b793a8b2d4fbb9734bbc2bb10993c54a
-  NDManualObjects: 6fe4610367fde3aab45b9a3bfa25ea567332fbce
+  NDManualObjects: f6f99fa94bb0ffb413a7418806b206b87ce54b6f
 
 PODFILE CHECKSUM: 2b05c3f78713195c1ee00103b3e3fa8ab2a4f1c5
 

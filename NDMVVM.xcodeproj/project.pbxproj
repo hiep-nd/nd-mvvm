@@ -186,6 +186,7 @@
 		BA0D891523D6A95300D49166 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BA0D897923D6B18800D49166 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		BA0D897B23D6B18E00D49166 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		BA241A9B249102C700CC5383 /* NDMVVM.modulemap */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.module-map"; path = NDMVVM.modulemap; sourceTree = "<group>"; };
 		BA65DB972480FC1C00736B2C /* NDCollectionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NDCollectionViewController.h; sourceTree = "<group>"; };
 		BA65DB982480FC1C00736B2C /* NDCollectionViewController.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = NDCollectionViewController.mm; sourceTree = "<group>"; };
 		BA65DBA52481024900736B2C /* NDCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NDCollectionViewCell.h; sourceTree = "<group>"; };
@@ -220,7 +221,7 @@
 		BA69E2702452FD4E003F7856 /* NDListViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NDListViewModel.h; path = NDMVVM/ViewModels/NDListViewModel.h; sourceTree = SOURCE_ROOT; };
 		BA69E2712452FD4E003F7856 /* NDItemViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NDItemViewModel.h; path = NDMVVM/ViewModels/NDItemViewModel.h; sourceTree = SOURCE_ROOT; };
 		BA69E2722452FD4E003F7856 /* NDViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NDViewModel.h; path = NDMVVM/ViewModels/NDViewModel.h; sourceTree = SOURCE_ROOT; };
-		BA69E2732452FD4E003F7856 /* NDListViewModel+Protected.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NDListViewModel+Protected.h"; path = "NDMVVM/ViewModels/NDListViewModel+Protected.h"; sourceTree = SOURCE_ROOT; };
+		BA69E2732452FD4E003F7856 /* NDListViewModel+Protected.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NDListViewModel+Protected.h"; path = "NDMVVM/ViewModels/Privates/NDListViewModel+Protected.h"; sourceTree = SOURCE_ROOT; };
 		BA69E2742452FD4F003F7856 /* NDMutableListViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NDMutableListViewModel.h; path = NDMVVM/ViewModels/NDMutableListViewModel.h; sourceTree = SOURCE_ROOT; };
 		BA69E2752452FD4F003F7856 /* NDSelectableViewModel.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = NDSelectableViewModel.mm; path = NDMVVM/ViewModels/NDSelectableViewModel.mm; sourceTree = SOURCE_ROOT; };
 		BA69E2762452FD4F003F7856 /* NDListViewModel.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = NDListViewModel.mm; path = NDMVVM/ViewModels/NDListViewModel.mm; sourceTree = SOURCE_ROOT; };
@@ -314,6 +315,7 @@
 				BA0D891F23D6A98C00D49166 /* ViewModels */,
 				BA0D893323D6A98C00D49166 /* Views */,
 				BA0D890823D6A95300D49166 /* NDMVVM.h */,
+				BA241A9B249102C700CC5383 /* NDMVVM.modulemap */,
 				BA0D890923D6A95300D49166 /* Info.plist */,
 				BAFD7FC4247F86E900EC8CF3 /* Privates */,
 			);
@@ -332,11 +334,11 @@
 		BA0D891F23D6A98C00D49166 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				BA241A9C24915CDA00CC5383 /* Privates */,
 				BA69E2712452FD4E003F7856 /* NDItemViewModel.h */,
 				BA69E2792452FD4F003F7856 /* NDItemViewModel.mm */,
 				BA69E2702452FD4E003F7856 /* NDListViewModel.h */,
 				BA69E2762452FD4F003F7856 /* NDListViewModel.mm */,
-				BA69E2732452FD4E003F7856 /* NDListViewModel+Protected.h */,
 				BA69E2742452FD4F003F7856 /* NDMutableListViewModel.h */,
 				BA69E27B2452FD4F003F7856 /* NDMutableListViewModel.mm */,
 				BA69E27A2452FD4F003F7856 /* NDSelectableViewModel.h */,
@@ -396,6 +398,14 @@
 				85EA44B09442C227759C72A9 /* Pods_NDMVVM_NDMVVMTests.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BA241A9C24915CDA00CC5383 /* Privates */ = {
+			isa = PBXGroup;
+			children = (
+				BA69E2732452FD4E003F7856 /* NDListViewModel+Protected.h */,
+			);
+			path = Privates;
 			sourceTree = "<group>";
 		};
 		BA65DBAE248108A800736B2C /* NDTableViewController */ = {

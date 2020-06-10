@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "NDMVVM"
-  s.version      = "0.0.1"
+  s.version      = "0.0.2"
   s.summary      = "Support MVVM pattern."
   s.description  = <<-DESC
   NDMVVM is a small framework that support MVVM pattern.
@@ -15,8 +15,14 @@ Pod::Spec.new do |s|
   #s.source        = { :http => 'file:' + URI.escape(__dir__) + '/' }
   s.source       = { :git => "https://github.com/hiep-nd/nd-mvvm.git", :tag => "Pod-#{s.version}" }
   s.source_files  = "NDMVVM/**/*.{h,m,mm}"
-  s.public_header_files = "NDMVVM/NDMVVM.h", "NDMVVM/{Abstracts,ViewModels,Views}/**/*.h"
+  # TODO: - need updated
+  #s.public_header_files = "NDMVVM/NDMVVM.h", "NDMVVM/{Abstracts,ViewModels,Views}/*.h"
+  #s.public_header_files = "NDMVVM/*.h", "NDMVVM/[^P]*/**/*.h", "NDMVVM/*/[^P]*/**/*.h"
+  s.public_header_files = "NDMVVM/**/*.h"
+  s.private_header_files = "NDMVVM/**/Privates/**/*.h"
   s.header_mappings_dir = 'NDMVVM'
+  s.framework = 'Foundation', 'UIKit'
+  s.module_map = 'NDMVVM/NDMVVM.modulemap'
   
   s.dependency 'NDLog'
   s.dependency 'NDManualObjects'

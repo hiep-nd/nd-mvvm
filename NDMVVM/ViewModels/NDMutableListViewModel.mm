@@ -9,7 +9,8 @@
 #import <NDMVVM/ViewModels/NDMutableListViewModel.h>
 
 #import <NDMVVM/Abstracts/NDMutableListView.h>
-#import <NDMVVM/ViewModels/NDListViewModel+Protected.h>
+
+#import "Privates/NDListViewModel+Protected.h"
 
 @implementation NDMutableListViewModel
 
@@ -65,7 +66,7 @@ inline id<NDMutableListView> View(id<NDViewModel> self) {
 
 inline NSMutableArray<__kindof id<NDItemViewModel>>* ItemViewModels(
     id<NDMutableListViewModel> self) {
-  return (NSMutableArray*)self.itemViewModels;
+  return self.itemViewModels;
 }
 }
 

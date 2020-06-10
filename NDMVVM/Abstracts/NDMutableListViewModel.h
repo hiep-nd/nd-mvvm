@@ -14,7 +14,7 @@ NS_SWIFT_NAME(NDMutableListViewModelProtocol)
 @protocol NDMutableListViewModel <NDListViewModel>
 
 @property(nonatomic, strong)
-    NSArray<__kindof id<NDItemViewModel>>* itemViewModels;
+    __kindof NSArray<__kindof id<NDItemViewModel>>* itemViewModels;
 
 - (void)insertItemViewModel:(__kindof id<NDItemViewModel>)itemViewModel
                      atItem:(NSInteger)item;

@@ -6,9 +6,7 @@
 //  Copyright © 2019 Nguyen Duc Hiep. All rights reserved.
 //
 
-#import <NDMVVM/ViewModels/NDListViewModel+Protected.h>
-
-#import <NDMVVM/Abstracts/NDListViewModel.h>
+#import "Privates/NDListViewModel+Protected.h"
 
 @protocol NDListView;
 

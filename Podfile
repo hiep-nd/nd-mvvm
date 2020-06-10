@@ -6,15 +6,12 @@ target 'NDMVVM' do
   use_frameworks!
   
   # Pods for NDMVVM
+  pod 'NDLog'
+  pod 'NDManualObjects'
   
-  pod 'NDLog', :path => '/Users/hiep.nd/Google Drive/github/NDLog'
-  #  pod 'NDAutolayoutUtil', :path => '/Users/hiep.nd/Self/NDAutolayoutUtil'
-  #  pod 'NDAutolayoutUtil', :git => 'https://github.com/hiep-nd/nd-manual-object.git'
-  #    pod 'NDAutolayoutUtil'
-  
-  pod 'NDManualObjects', :path => '/Users/hiep.nd/Google Drive/github/NDManualObjects'
-  #  pod 'NDManualObject', :git => 'https://github.com/hiep-nd/nd-manual-object.git'
-  #  pod 'NDManualObject'
+  # Development
+#  pod 'NDLog', :path => __dir__ + '/../NDLog'
+#  pod 'NDManualObjects', :path => __dir__ + '/../NDManualObjects'
   
   target 'NDMVVMTests' do
     # Pods for testing
