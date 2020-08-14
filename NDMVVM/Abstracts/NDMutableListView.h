@@ -14,10 +14,14 @@ NS_SWIFT_NAME(NDMutableListViewProtocol)
 @protocol NDMutableListView <NDListView>
 
 - (void)reloadAll;
-- (void)insertItem:(NSInteger)item;
-- (void)updateItem:(NSInteger)item;
-- (void)deleteItem:(NSInteger)item;
-- (void)batchUpdate:(void (^)(void))update;
+
+/// Batch update list view.
+/// @param deletedItems The original items will be deleted.
+/// @param updatedItems The original items will be updated.
+/// @param insertedItems The new items will be inserted.
+- (void)deleteItems:(NSArray<NSNumber*>* _Nullable)deletedItems
+        updateItems:(NSArray<NSNumber*>* _Nullable)updatedItems
+        insertItems:(NSArray<NSNumber*>* _Nullable)insertedItems;
 
 @end
 

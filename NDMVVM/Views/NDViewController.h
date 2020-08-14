@@ -13,9 +13,6 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface NDViewController : NDManualViewController <NDView>
-
-@property(nonatomic, copy) void (^_Nullable loadHandler)(NDViewController*);
-
 @end
 
 NS_ASSUME_NONNULL_END

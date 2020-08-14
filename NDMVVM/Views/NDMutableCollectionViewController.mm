@@ -8,36 +8,54 @@
 
 #import <NDMVVM/Views/NDMutableCollectionViewController.h>
 
+namespace {
+inline NSMutableArray<NSIndexPath*>* ToIndexPaths(NSArray<NSNumber*>* items) {
+  if (!items) {
+    return nil;
+  }
+  auto indexPaths = [[NSMutableArray alloc] initWithCapacity:items.count];
+  for (__unsafe_unretained NSNumber* item in items) {
+    [indexPaths addObject:[NSIndexPath indexPathForItem:item.integerValue
+                                              inSection:0]];
+  }
+  return indexPaths;
+}
+}
+
 @protocol NDMutableListViewModel;
 
 @implementation NDMutableCollectionViewController
 
 // MARK: - NDMutableListView
 
-- (void)batchUpdate:(nonnull void (^)())update {
-  [self.collectionView performBatchUpdates:update completion:nil];
-}
+- (void)deleteItems:(NSArray<NSNumber*>*)deletedItems
+        updateItems:(NSArray<NSNumber*>*)updatedItems
+        insertItems:(NSArray<NSNumber*>*)insertedItems {
+  if (deletedItems.count == 0 && updatedItems.count == 0 &&
+      insertedItems.count == 0) {
+    return;
+  }
 
-- (void)deleteItem:(NSInteger)item {
+  auto deletedIndexPaths = ToIndexPaths(deletedItems);
+  auto updatedIndexPaths = ToIndexPaths(updatedItems);
+  auto insertedIndexPaths = ToIndexPaths(insertedItems);
   [self.collectionView
-      deleteItemsAtIndexPaths:@[ [NSIndexPath indexPathForItem:item
-                                                     inSection:0] ]];
-}
-
-- (void)insertItem:(NSInteger)item {
-  [self.collectionView
-      insertItemsAtIndexPaths:@[ [NSIndexPath indexPathForItem:item
-                                                     inSection:0] ]];
+      performBatchUpdates:^{
+        if (deletedIndexPaths) {
+          [self.collectionView deleteItemsAtIndexPaths:deletedIndexPaths];
+        }
+        if (updatedIndexPaths) {
+          [self.collectionView reloadItemsAtIndexPaths:updatedIndexPaths];
+        }
+        if (insertedIndexPaths) {
+          [self.collectionView insertItemsAtIndexPaths:insertedIndexPaths];
+        }
+      }
+               completion:nil];
 }
 
 - (void)reloadAll {
   [self.collectionView reloadSections:[NSIndexSet indexSetWithIndex:0]];
-}
-
-- (void)updateItem:(NSInteger)item {
-  [self.collectionView
-      reloadItemsAtIndexPaths:@[ [NSIndexPath indexPathForItem:item
-                                                     inSection:0] ]];
 }
 
 - (BOOL)validateViewModel:(__kindof id<NDViewModel>)viewModel {

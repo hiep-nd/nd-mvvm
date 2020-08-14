@@ -8,9 +8,7 @@
 
 #import <NDMVVM/Views/NDTableViewCell.h>
 
-#import "../Privates/NDUtils.h"
-
-using namespace nd;
+#import "../Privates/NDViewDefaultImpl.h"
 
 @implementation NDTableViewCell
 

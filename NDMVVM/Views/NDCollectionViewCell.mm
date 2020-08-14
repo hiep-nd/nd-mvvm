@@ -8,7 +8,7 @@
 
 #import <NDMVVM/Views/NDCollectionViewCell.h>
 
-#import "../Privates/NDUtils.h"
+#import "../Privates/NDViewDefaultImpl.h"
 
 using namespace nd;
 

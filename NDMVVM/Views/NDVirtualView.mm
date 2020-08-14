@@ -8,7 +8,7 @@
 
 #import <NDMVVM/Views/NDVirtualView.h>
 
-#import "../Privates/NDUtils.h"
+#import "../Privates/NDViewDefaultImpl.h"
 
 @implementation NDVirtualView
 

@@ -8,22 +8,9 @@
 
 #import <NDMVVM/Views/NDViewController.h>
 
-#import "../Privates/NDUtils.h"
-
-using namespace nd;
+#import "../Privates/NDViewDefaultImpl.h"
 
 @implementation NDViewController
-
-// MARK: - NDManualViewController
-
-- (void)viewDidLoad {
-  [super viewDidLoad];
-
-  if (self.loadHandler) {
-    self.loadHandler(self);
-    self.loadHandler = nil;
-  }
-}
 
 // MARK: - NDView
 NDView_Default_Impl;

@@ -10,12 +10,14 @@
 
 @implementation NDSelectableViewModel
 
-@synthesize selectHandler;
+@synthesize select = _select;
 
-- (void)select {
-  if (self.selectHandler) {
-    self.selectHandler(self);
+- (instancetype)init {
+  self = [super init];
+  if (self) {
+    _select = [[NDEvent alloc] initWithOwner:self];
   }
+  return self;
 }
 
 @end

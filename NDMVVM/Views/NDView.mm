@@ -8,7 +8,7 @@
 
 #import <NDMVVM/Views/NDView.h>
 
-#import "../Privates/NDUtils.h"
+#import "../Privates/NDViewDefaultImpl.h"
 
 using namespace nd;
 

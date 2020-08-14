@@ -1,5 +1,5 @@
 //
-//  NDMutableListViewModel.m
+//  NDMutableListViewModel.mm
 //  NDMVVM
 //
 //  Created by Nguyen Duc Hiep on 4/24/20.
@@ -11,8 +11,11 @@
 #import <NDMVVM/Abstracts/NDMutableListView.h>
 
 #import "Privates/NDListViewModel+Protected.h"
+#import "Privates/NDMutableListViewModelHelper.h"
 
-@implementation NDMutableListViewModel
+@implementation NDMutableListViewModel {
+  NDMutableListViewModelHelper _helper;
+}
 
 // MARK: - NDMutableListViewModel
 
@@ -27,26 +30,47 @@
 - (void)insertItemViewModel:(__kindof id<NDItemViewModel>)itemViewModel
                      atItem:(NSInteger)item {
   [ItemViewModels(self) insertObject:itemViewModel atIndex:item];
-  [View(self) insertItem:item];
+  if (!_helper.IsBatchUpdating()) {
+    [View(self) deleteItems:nil updateItems:nil insertItems:@[ @(item) ]];
+  } else {
+    _helper.Insert(item);
+  }
 }
 
 - (void)replaceItemViewModel:(__kindof id<NDItemViewModel>)itemViewModel
                       atItem:(NSInteger)item {
   ItemViewModels(self)[item] = itemViewModel;
-  [View(self) updateItem:item];
+  if (!_helper.IsBatchUpdating()) {
+    [View(self) deleteItems:nil updateItems:@[ @(item) ] insertItems:nil];
+  } else {
+    _helper.Update(item);
+  }
 }
 
 - (void)deleteItemViewModelAtItem:(NSInteger)item {
-  [View(self) deleteItem:item];
+  [ItemViewModels(self) removeObjectAtIndex:item];
+  if (!_helper.IsBatchUpdating()) {
+    [View(self) deleteItems:@[ @(item) ] updateItems:nil insertItems:nil];
+  } else {
+    _helper.Delete(item);
+  }
 }
 
-- (void)batchUpdate:(void (^)())update {
-  if (update) {
-    if (View(self)) {
-      [View(self) batchUpdate:update];
-    } else {
-      update();
-    }
+- (void)batchUpdates:(void(NS_NOESCAPE ^)(void))updates {
+  if (!updates) {
+    return;
+  }
+
+  if (_helper.IsBatchUpdating()) {
+    updates();
+  } else {
+    _helper.BeginUpdates();
+    updates();
+    NSMutableArray *deleteds, *updateds, *inserteds;
+    _helper.EndUpdates(&deleteds, &updateds, &inserteds);
+    [View(self) deleteItems:deleteds
+                updateItems:updateds
+                insertItems:inserteds];
   }
 }
 
@@ -68,6 +92,31 @@ inline NSMutableArray<__kindof id<NDItemViewModel>>* ItemViewModels(
     id<NDMutableListViewModel> self) {
   return self.itemViewModels;
 }
+}
+
+@end
+
+@implementation NDMutableListViewModel (NDUtils)
+
+- (void)insertItemViewModels:
+            (NSArray<__kindof id<NDItemViewModel>>*)itemViewModels
+                      atItem:(NSInteger)item {
+  [itemViewModels enumerateObjectsUsingBlock:^(__kindof id<NDItemViewModel> obj,
+                                               NSUInteger idx, BOOL* stop) {
+    [self insertItemViewModel:obj atItem:idx + item];
+  }];
+}
+
+- (void)addItemViewModel:(__kindof id<NDItemViewModel>)itemViewModel {
+  [self insertItemViewModel:itemViewModel atItem:ItemViewModels(self).count];
+}
+
+- (void)addItemViewModels:
+    (NSArray<__kindof id<NDItemViewModel>>*)itemViewModels {
+  [itemViewModels enumerateObjectsUsingBlock:^(__kindof id<NDItemViewModel> obj,
+                                               NSUInteger, BOOL*) {
+    [self addItemViewModel:obj];
+  }];
 }
 
 @end

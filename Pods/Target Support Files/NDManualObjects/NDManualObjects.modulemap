@@ -3,6 +3,7 @@ framework module NDManualObjects {
   
   header "Abstracts/NDManualObject.h"
 
+  header "Objects/NDLoading.h"
   header "Objects/NDManualCollectionViewCell.h"
   header "Objects/NDManualCollectionViewController.h"
   header "Objects/NDManualObject.h"
@@ -12,6 +13,7 @@ framework module NDManualObjects {
   header "Objects/NDManualView.h"
   header "Objects/NDManualViewController.h"
 
+  header "Utils/UIViewController+NDManualObjects.h"
   header "Utils/UIView+NDManualObjects.h"
 
   export *

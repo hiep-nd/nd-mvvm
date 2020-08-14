@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "NDMVVM"
-  s.version      = "0.0.2"
+  s.version      = "0.0.3"
   s.summary      = "Support MVVM pattern."
   s.description  = <<-DESC
   NDMVVM is a small framework that support MVVM pattern.
@@ -24,6 +24,7 @@ Pod::Spec.new do |s|
   s.framework = 'Foundation', 'UIKit'
   s.module_map = 'NDMVVM/NDMVVM.modulemap'
   
-  s.dependency 'NDLog'
-  s.dependency 'NDManualObjects'
+  s.dependency 'NDLog', '~> 0.0.4'
+  s.dependency 'NDManualObjects', '~> 0.0.6'
+  s.dependency 'NDUtils', '~> 0.0.4'
 end

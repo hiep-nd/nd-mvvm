@@ -14,33 +14,37 @@
 
 #import <NDLog/NDLog.h>
 
-#import "../Privates/NDUtils.h"
+#import "../Privates/NDViewDefaultImpl.h"
 
 using namespace nd;
 
 @implementation NDTableViewController
 
 // MARK: - NDManualTableViewController
+- (void)manualInit {
+  [super manualInit];
 
-- (NSInteger)tableView:(UITableView*)tableView
-    numberOfRowsInSection:(NSInteger)section {
-  return ViewModel(self).numberOfItems;
-}
+  self.numberOfRowsInSectionHandler =
+      ^NSInteger(NDTableViewController* self, NSInteger section) {
+        return ViewModel(self).numberOfItems;
+      };
 
-- (UITableViewCell*)tableView:(UITableView*)tableView
-        cellForRowAtIndexPath:(NSIndexPath*)indexPath {
-  auto cellViewModel = [ViewModel(self) viewModelForItem:indexPath.row];
-  NDTableViewCell* cell =
-      [tableView dequeueReusableCellWithIdentifier:cellViewModel.identifier
-                                      forIndexPath:indexPath];
-  NDRoute(cellViewModel, cell);
-  return cell;
+  self.cellReusableIdentifierForRowAtIndexPathHandler =
+      ^NSString*(NDTableViewController* self, NSIndexPath* indexPath) {
+    return [ViewModel(self) viewModelForItem:indexPath.row].identifier;
+  };
+  self.prepareCellForRowAtIndexPathHandler =
+      ^(NDTableViewController* self, NDTableViewCell* cell,
+        NSIndexPath* indexPath) {
+        NDRoute([ViewModel(self) viewModelForItem:indexPath.row], cell);
+      };
 }
 
 // MARK: - NDListView
 @synthesize viewModel = _viewModel;
 
-NDView_ViewModel_Setter_Default_Impl;
+// TODO: - need confirm
+// NDView_ViewModel_Setter_Default_Impl;
 
 - (BOOL)validateViewModel:(__kindof id<NDViewModel>)viewModel {
   return [viewModel conformsToProtocol:@protocol(NDListViewModel)];

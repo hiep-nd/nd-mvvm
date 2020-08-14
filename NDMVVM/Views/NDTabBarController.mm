@@ -8,7 +8,7 @@
 
 #import <NDMVVM/Views/NDTabBarController.h>
 
-#import "../Privates/NDUtils.h"
+#import "../Privates/NDViewDefaultImpl.h"
 
 @implementation NDTabBarController
 

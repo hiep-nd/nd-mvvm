@@ -8,14 +8,15 @@
 
 #import <NDMVVM/Abstracts/NDViewModel.h>
 
+#import <NDMVVM/Objects/NDEvent.h>
+
 NS_ASSUME_NONNULL_BEGIN
 
 NS_SWIFT_NAME(NDSelectableViewModelProtocol)
 @protocol NDSelectableViewModel <NDViewModel>
 
-@property(nonatomic, copy, nullable) void (^selectHandler)
-    (__kindof id<NDSelectableViewModel> item);
-- (void)select;
+@property(nonatomic, strong, readonly)
+    NDEvent<id<NDSelectableViewModel>>* select;
 
 @end
 

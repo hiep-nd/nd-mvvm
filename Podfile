@@ -6,12 +6,13 @@ target 'NDMVVM' do
   use_frameworks!
   
   # Pods for NDMVVM
-  pod 'NDLog'
-  pod 'NDManualObjects'
+#  pod 'NDLog'
+#  pod 'NDManualObjects'
   
   # Development
-#  pod 'NDLog', :path => __dir__ + '/../NDLog'
-#  pod 'NDManualObjects', :path => __dir__ + '/../NDManualObjects'
+  pod 'NDLog', :path => '../NDLog'
+  pod 'NDManualObjects', :path => '../NDManualObjects'
+  pod 'NDUtils', :path => '../NDUtils'
   
   target 'NDMVVMTests' do
     # Pods for testing

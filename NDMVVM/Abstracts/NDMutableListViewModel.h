@@ -21,7 +21,7 @@ NS_SWIFT_NAME(NDMutableListViewModelProtocol)
 - (void)replaceItemViewModel:(__kindof id<NDItemViewModel>)itemViewModel
                       atItem:(NSInteger)item;
 - (void)deleteItemViewModelAtItem:(NSInteger)item;
-- (void)batchUpdate:(void (^)(void))update;
+- (void)batchUpdates:(void(NS_NOESCAPE ^)(void))updates;
 
 @end
 

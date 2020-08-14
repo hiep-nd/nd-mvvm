@@ -9,42 +9,80 @@
 /* Begin PBXBuildFile section */
 		47F8AE4C44D6371B47C24510 /* Pods_NDMVVM_NDMVVMTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85EA44B09442C227759C72A9 /* Pods_NDMVVM_NDMVVMTests.framework */; };
 		B42288C3C658E11E353D1F10 /* Pods_NDMVVM.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96FB7BB5201B4CF1565A63F7 /* Pods_NDMVVM.framework */; };
+		BA00195024BEB76A000A3B1C /* NDCollectionViewController+NDSelectableItemViewModel.h in Headers */ = {isa = PBXBuildFile; fileRef = BA00194E24BEB76A000A3B1C /* NDCollectionViewController+NDSelectableItemViewModel.h */; };
+		BA00195124BEB76A000A3B1C /* NDCollectionViewController+NDSelectableItemViewModel.mm in Sources */ = {isa = PBXBuildFile; fileRef = BA00194F24BEB76A000A3B1C /* NDCollectionViewController+NDSelectableItemViewModel.mm */; };
+		BA00195224BEB8E1000A3B1C /* NDCollectionViewController+NDSelectableItemViewModel.h in Copy Files Views */ = {isa = PBXBuildFile; fileRef = BA00194E24BEB76A000A3B1C /* NDCollectionViewController+NDSelectableItemViewModel.h */; };
 		BA0D890F23D6A95300D49166 /* NDMVVM.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA0D890523D6A95300D49166 /* NDMVVM.framework */; };
 		BA0D891423D6A95300D49166 /* NDMVVMTests.mm in Sources */ = {isa = PBXBuildFile; fileRef = BA0D891323D6A95300D49166 /* NDMVVMTests.mm */; };
 		BA0D891623D6A95300D49166 /* NDMVVM.h in Headers */ = {isa = PBXBuildFile; fileRef = BA0D890823D6A95300D49166 /* NDMVVM.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		BA0D897D23D6B19800D49166 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA0D897B23D6B18E00D49166 /* UIKit.framework */; settings = {ATTRIBUTES = (Required, ); }; };
+		BA241AA6249229C600CC5383 /* NDSelectableItemViewModel.h in Headers */ = {isa = PBXBuildFile; fileRef = BA241AA4249229C500CC5383 /* NDSelectableItemViewModel.h */; };
+		BA241AA7249229C600CC5383 /* NDSelectableItemViewModel.mm in Sources */ = {isa = PBXBuildFile; fileRef = BA241AA5249229C500CC5383 /* NDSelectableItemViewModel.mm */; };
+		BA241AA824922C8E00CC5383 /* NDSelectableItemViewModel.h in Copy Files ViewModels */ = {isa = PBXBuildFile; fileRef = BA241AA4249229C500CC5383 /* NDSelectableItemViewModel.h */; };
+		BA3379B024E1A5C20061B1DC /* NDRefeshableView.h in Headers */ = {isa = PBXBuildFile; fileRef = BA3379AE24E1A5C20061B1DC /* NDRefeshableView.h */; };
+		BA3379B424E1A5CF0061B1DC /* NDRefeshableViewModel.h in Headers */ = {isa = PBXBuildFile; fileRef = BA3379B224E1A5CF0061B1DC /* NDRefeshableViewModel.h */; };
+		BA3379B924E1A6660061B1DC /* NDRefeshableViewModel.mm in Sources */ = {isa = PBXBuildFile; fileRef = BA3379B724E1A6660061B1DC /* NDRefeshableViewModel.mm */; };
+		BA3379BA24E1A6AD0061B1DC /* NDRefeshableView.h in Copy Files Abstracts */ = {isa = PBXBuildFile; fileRef = BA3379AE24E1A5C20061B1DC /* NDRefeshableView.h */; };
+		BA3379BB24E1A6AD0061B1DC /* NDRefeshableViewModel.h in Copy Files Abstracts */ = {isa = PBXBuildFile; fileRef = BA3379B224E1A5CF0061B1DC /* NDRefeshableViewModel.h */; };
+		BA3B856524B6D70800624DA9 /* NDTableViewController+NDSelectableItemViewModel.h in Headers */ = {isa = PBXBuildFile; fileRef = BA3B856324B6D70700624DA9 /* NDTableViewController+NDSelectableItemViewModel.h */; };
+		BA3B856624B6D70800624DA9 /* NDTableViewController+NDSelectableItemViewModel.mm in Sources */ = {isa = PBXBuildFile; fileRef = BA3B856424B6D70700624DA9 /* NDTableViewController+NDSelectableItemViewModel.mm */; };
+		BA3B857424B6F38200624DA9 /* NDContentHeightAdjustableView.h in Headers */ = {isa = PBXBuildFile; fileRef = BA3B857224B6F38100624DA9 /* NDContentHeightAdjustableView.h */; };
+		BA3B857524B6F38200624DA9 /* NDContentHeightAdjustableViewModel.h in Headers */ = {isa = PBXBuildFile; fileRef = BA3B857324B6F38100624DA9 /* NDContentHeightAdjustableViewModel.h */; };
+		BA3B857824B6F39E00624DA9 /* NDContentHeightAdjustableViewModel.h in Headers */ = {isa = PBXBuildFile; fileRef = BA3B857624B6F39E00624DA9 /* NDContentHeightAdjustableViewModel.h */; };
+		BA3B857924B6F39E00624DA9 /* NDContentHeightAdjustableViewModel.mm in Sources */ = {isa = PBXBuildFile; fileRef = BA3B857724B6F39E00624DA9 /* NDContentHeightAdjustableViewModel.mm */; };
+		BA3B857C24B6F3B000624DA9 /* NDContentHeightAdjustableTableViewCell.h in Headers */ = {isa = PBXBuildFile; fileRef = BA3B857A24B6F3B000624DA9 /* NDContentHeightAdjustableTableViewCell.h */; };
+		BA3B857D24B6F3B000624DA9 /* NDContentHeightAdjustableTableViewCell.mm in Sources */ = {isa = PBXBuildFile; fileRef = BA3B857B24B6F3B000624DA9 /* NDContentHeightAdjustableTableViewCell.mm */; };
+		BA3B858024B6F47600624DA9 /* NDViewDefaultImpl.h in Headers */ = {isa = PBXBuildFile; fileRef = BA3B857E24B6F47600624DA9 /* NDViewDefaultImpl.h */; };
+		BA3B858124B6F47600624DA9 /* NDViewDefaultImpl.mm in Sources */ = {isa = PBXBuildFile; fileRef = BA3B857F24B6F47600624DA9 /* NDViewDefaultImpl.mm */; };
+		BA3B858424B6F51800624DA9 /* NDViewModelDefaultImpl.h in Headers */ = {isa = PBXBuildFile; fileRef = BA3B858224B6F51800624DA9 /* NDViewModelDefaultImpl.h */; };
+		BA3B858524B6F51800624DA9 /* NDViewModelDefaultImpl.mm in Sources */ = {isa = PBXBuildFile; fileRef = BA3B858324B6F51800624DA9 /* NDViewModelDefaultImpl.mm */; };
+		BA3B858C24B6FA6F00624DA9 /* NDContentHeightAdjustableViewModelDefaultImpl.h in Headers */ = {isa = PBXBuildFile; fileRef = BA3B858A24B6FA6F00624DA9 /* NDContentHeightAdjustableViewModelDefaultImpl.h */; };
+		BA3B858D24B6FA6F00624DA9 /* NDContentHeightAdjustableViewModelDefaultImpl.mm in Sources */ = {isa = PBXBuildFile; fileRef = BA3B858B24B6FA6F00624DA9 /* NDContentHeightAdjustableViewModelDefaultImpl.mm */; };
+		BA3B859024B7057A00624DA9 /* NDTableViewController+NDContentHeightAdjustableTableViewCell.h in Headers */ = {isa = PBXBuildFile; fileRef = BA3B858E24B7057A00624DA9 /* NDTableViewController+NDContentHeightAdjustableTableViewCell.h */; };
+		BA3B859124B7057A00624DA9 /* NDTableViewController+NDContentHeightAdjustableTableViewCell.mm in Sources */ = {isa = PBXBuildFile; fileRef = BA3B858F24B7057A00624DA9 /* NDTableViewController+NDContentHeightAdjustableTableViewCell.mm */; };
+		BA3B859424B72A2C00624DA9 /* NDContentHeightAdjustableItemViewModel.h in Headers */ = {isa = PBXBuildFile; fileRef = BA3B859224B72A2C00624DA9 /* NDContentHeightAdjustableItemViewModel.h */; };
+		BA3B859524B72A2C00624DA9 /* NDContentHeightAdjustableItemViewModel.mm in Sources */ = {isa = PBXBuildFile; fileRef = BA3B859324B72A2C00624DA9 /* NDContentHeightAdjustableItemViewModel.mm */; };
+		BA3B859824B72A6F00624DA9 /* NDSelectableContentHeightAdjustableItemViewModel.h in Headers */ = {isa = PBXBuildFile; fileRef = BA3B859624B72A6F00624DA9 /* NDSelectableContentHeightAdjustableItemViewModel.h */; };
+		BA3B859924B72A6F00624DA9 /* NDSelectableContentHeightAdjustableItemViewModel.mm in Sources */ = {isa = PBXBuildFile; fileRef = BA3B859724B72A6F00624DA9 /* NDSelectableContentHeightAdjustableItemViewModel.mm */; };
+		BA3B859A24B72C8100624DA9 /* NDContentHeightAdjustableView.h in Copy Files Abstracts */ = {isa = PBXBuildFile; fileRef = BA3B857224B6F38100624DA9 /* NDContentHeightAdjustableView.h */; };
+		BA3B859B24B72C8100624DA9 /* NDContentHeightAdjustableViewModel.h in Copy Files Abstracts */ = {isa = PBXBuildFile; fileRef = BA3B857324B6F38100624DA9 /* NDContentHeightAdjustableViewModel.h */; };
+		BA3B859C24B72CBB00624DA9 /* NDContentHeightAdjustableTableViewCell.h in Copy Files Views */ = {isa = PBXBuildFile; fileRef = BA3B857A24B6F3B000624DA9 /* NDContentHeightAdjustableTableViewCell.h */; };
+		BA3B859D24B72CBB00624DA9 /* NDTableViewController+NDContentHeightAdjustableTableViewCell.h in Copy Files Views */ = {isa = PBXBuildFile; fileRef = BA3B858E24B7057A00624DA9 /* NDTableViewController+NDContentHeightAdjustableTableViewCell.h */; };
+		BA3B859E24B72CBB00624DA9 /* NDTableViewController+NDSelectableItemViewModel.h in Copy Files Views */ = {isa = PBXBuildFile; fileRef = BA3B856324B6D70700624DA9 /* NDTableViewController+NDSelectableItemViewModel.h */; };
+		BA3B859F24B72CDE00624DA9 /* NDContentHeightAdjustableViewModel.h in Copy Files ViewModels */ = {isa = PBXBuildFile; fileRef = BA3B857624B6F39E00624DA9 /* NDContentHeightAdjustableViewModel.h */; };
+		BA3B85A024B72CDE00624DA9 /* NDContentHeightAdjustableItemViewModel.h in Copy Files ViewModels */ = {isa = PBXBuildFile; fileRef = BA3B859224B72A2C00624DA9 /* NDContentHeightAdjustableItemViewModel.h */; };
+		BA3B85A124B72CDE00624DA9 /* NDSelectableContentHeightAdjustableItemViewModel.h in Copy Files ViewModels */ = {isa = PBXBuildFile; fileRef = BA3B859624B72A6F00624DA9 /* NDSelectableContentHeightAdjustableItemViewModel.h */; };
+		BA4793DA24B87BC0001E4F1D /* NDContentHeightAdjustableViewDefaultImpl.h in Headers */ = {isa = PBXBuildFile; fileRef = BA4793D824B87BC0001E4F1D /* NDContentHeightAdjustableViewDefaultImpl.h */; };
+		BA4793DB24B87BC0001E4F1D /* NDContentHeightAdjustableViewDefaultImpl.mm in Sources */ = {isa = PBXBuildFile; fileRef = BA4793D924B87BC0001E4F1D /* NDContentHeightAdjustableViewDefaultImpl.mm */; };
+		BA4793E124B9AA96001E4F1D /* NDAppearableViewModel.h in Headers */ = {isa = PBXBuildFile; fileRef = BA4793DF24B9AA96001E4F1D /* NDAppearableViewModel.h */; };
+		BA4793E924B9AC44001E4F1D /* NDAppearableItemViewModel.h in Headers */ = {isa = PBXBuildFile; fileRef = BA4793E724B9AC44001E4F1D /* NDAppearableItemViewModel.h */; };
+		BA4793EA24B9AC44001E4F1D /* NDAppearableItemViewModel.mm in Sources */ = {isa = PBXBuildFile; fileRef = BA4793E824B9AC44001E4F1D /* NDAppearableItemViewModel.mm */; };
+		BA4793ED24B9AD55001E4F1D /* NDTableViewController+NDAppearableItemViewModel.h in Headers */ = {isa = PBXBuildFile; fileRef = BA4793EB24B9AD55001E4F1D /* NDTableViewController+NDAppearableItemViewModel.h */; };
+		BA4793EE24B9AD55001E4F1D /* NDTableViewController+NDAppearableItemViewModel.mm in Sources */ = {isa = PBXBuildFile; fileRef = BA4793EC24B9AD55001E4F1D /* NDTableViewController+NDAppearableItemViewModel.mm */; };
+		BA4793EF24B9B083001E4F1D /* NDAppearableViewModel.h in Copy Files Abstracts */ = {isa = PBXBuildFile; fileRef = BA4793DF24B9AA96001E4F1D /* NDAppearableViewModel.h */; };
+		BA4793F024B9B092001E4F1D /* NDAppearableItemViewModel.h in Copy Files ViewModels */ = {isa = PBXBuildFile; fileRef = BA4793E724B9AC44001E4F1D /* NDAppearableItemViewModel.h */; };
+		BA4793F124B9B0A7001E4F1D /* NDTableViewController+NDAppearableItemViewModel.h in Copy Files Views */ = {isa = PBXBuildFile; fileRef = BA4793EB24B9AD55001E4F1D /* NDTableViewController+NDAppearableItemViewModel.h */; };
+		BA4DD53024D7EBC10060EC37 /* NDEvent.h in Headers */ = {isa = PBXBuildFile; fileRef = BA4DD52E24D7EBC10060EC37 /* NDEvent.h */; };
+		BA4DD53124D7EBC10060EC37 /* NDEvent.mm in Sources */ = {isa = PBXBuildFile; fileRef = BA4DD52F24D7EBC10060EC37 /* NDEvent.mm */; };
+		BA4DD53324D7EC330060EC37 /* NDEvent.h in Copy Files Objects */ = {isa = PBXBuildFile; fileRef = BA4DD52E24D7EBC10060EC37 /* NDEvent.h */; };
 		BA65DB992480FC1C00736B2C /* NDCollectionViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = BA65DB972480FC1C00736B2C /* NDCollectionViewController.h */; };
 		BA65DB9A2480FC1C00736B2C /* NDCollectionViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = BA65DB982480FC1C00736B2C /* NDCollectionViewController.mm */; };
 		BA65DBA72481024900736B2C /* NDCollectionViewCell.h in Headers */ = {isa = PBXBuildFile; fileRef = BA65DBA52481024900736B2C /* NDCollectionViewCell.h */; };
 		BA65DBA82481024900736B2C /* NDCollectionViewCell.mm in Sources */ = {isa = PBXBuildFile; fileRef = BA65DBA62481024900736B2C /* NDCollectionViewCell.mm */; };
 		BA65DBB7248108F500736B2C /* NDMutableTableViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = BA65DBAF248108F500736B2C /* NDMutableTableViewController.mm */; };
-		BA65DBB8248108F500736B2C /* NDSelectableTableViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = BA65DBB0248108F500736B2C /* NDSelectableTableViewController.mm */; };
-		BA65DBB9248108F500736B2C /* NDSelectableTableViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = BA65DBB1248108F500736B2C /* NDSelectableTableViewController.h */; };
 		BA65DBBA248108F500736B2C /* NDTableViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = BA65DBB2248108F500736B2C /* NDTableViewController.mm */; };
 		BA65DBBB248108F500736B2C /* NDTableViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = BA65DBB3248108F500736B2C /* NDTableViewController.h */; };
 		BA65DBBC248108F500736B2C /* NDTableViewCell.h in Headers */ = {isa = PBXBuildFile; fileRef = BA65DBB4248108F500736B2C /* NDTableViewCell.h */; };
 		BA65DBBD248108F500736B2C /* NDMutableTableViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = BA65DBB5248108F500736B2C /* NDMutableTableViewController.h */; };
 		BA65DBBE248108F500736B2C /* NDTableViewCell.mm in Sources */ = {isa = PBXBuildFile; fileRef = BA65DBB6248108F500736B2C /* NDTableViewCell.mm */; };
-		BA65DBC224810AF000736B2C /* NDSelectableMutableTableViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = BA65DBC024810AF000736B2C /* NDSelectableMutableTableViewController.mm */; };
-		BA65DBC324810AF000736B2C /* NDSelectableMutableTableViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = BA65DBC124810AF000736B2C /* NDSelectableMutableTableViewController.h */; };
-		BA65DBCA2481127700736B2C /* NDSelectableCollectionViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = BA65DBC42481127600736B2C /* NDSelectableCollectionViewController.mm */; };
 		BA65DBCB2481127700736B2C /* NDMutableCollectionViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = BA65DBC52481127600736B2C /* NDMutableCollectionViewController.mm */; };
-		BA65DBCC2481127700736B2C /* NDSelectableMutableCollectionViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = BA65DBC62481127700736B2C /* NDSelectableMutableCollectionViewController.h */; };
-		BA65DBCD2481127700736B2C /* NDSelectableMutableCollectionViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = BA65DBC72481127700736B2C /* NDSelectableMutableCollectionViewController.mm */; };
 		BA65DBCE2481127700736B2C /* NDMutableCollectionViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = BA65DBC82481127700736B2C /* NDMutableCollectionViewController.h */; };
-		BA65DBCF2481127700736B2C /* NDSelectableCollectionViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = BA65DBC92481127700736B2C /* NDSelectableCollectionViewController.h */; };
 		BA65DBD0248115B800736B2C /* NDMutableCollectionViewController.h in Copy Files Views */ = {isa = PBXBuildFile; fileRef = BA65DBC82481127700736B2C /* NDMutableCollectionViewController.h */; };
-		BA65DBD1248115B800736B2C /* NDSelectableMutableCollectionViewController.h in Copy Files Views */ = {isa = PBXBuildFile; fileRef = BA65DBC62481127700736B2C /* NDSelectableMutableCollectionViewController.h */; };
-		BA65DBD2248115B800736B2C /* NDSelectableCollectionViewController.h in Copy Files Views */ = {isa = PBXBuildFile; fileRef = BA65DBC92481127700736B2C /* NDSelectableCollectionViewController.h */; };
 		BA65DBD3248115B800736B2C /* NDCollectionViewController.h in Copy Files Views */ = {isa = PBXBuildFile; fileRef = BA65DB972480FC1C00736B2C /* NDCollectionViewController.h */; };
 		BA65DBD4248115B800736B2C /* NDCollectionViewCell.h in Copy Files Views */ = {isa = PBXBuildFile; fileRef = BA65DBA52481024900736B2C /* NDCollectionViewCell.h */; };
 		BA65DBD5248115B800736B2C /* NDMutableTableViewController.h in Copy Files Views */ = {isa = PBXBuildFile; fileRef = BA65DBB5248108F500736B2C /* NDMutableTableViewController.h */; };
-		BA65DBD6248115B800736B2C /* NDSelectableTableViewController.h in Copy Files Views */ = {isa = PBXBuildFile; fileRef = BA65DBB1248108F500736B2C /* NDSelectableTableViewController.h */; };
-		BA65DBD7248115B800736B2C /* NDSelectableMutableTableViewController.h in Copy Files Views */ = {isa = PBXBuildFile; fileRef = BA65DBC124810AF000736B2C /* NDSelectableMutableTableViewController.h */; };
 		BA65DBD8248115B800736B2C /* NDTableViewCell.h in Copy Files Views */ = {isa = PBXBuildFile; fileRef = BA65DBB4248108F500736B2C /* NDTableViewCell.h */; };
 		BA65DBD9248115B800736B2C /* NDTableViewController.h in Copy Files Views */ = {isa = PBXBuildFile; fileRef = BA65DBB3248108F500736B2C /* NDTableViewController.h */; };
-		BA69E2582452F8B4003F7856 /* NDUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = BA69E2562452F8B4003F7856 /* NDUtils.h */; };
-		BA69E2592452F8B4003F7856 /* NDUtils.mm in Sources */ = {isa = PBXBuildFile; fileRef = BA69E2572452F8B4003F7856 /* NDUtils.mm */; };
 		BA69E2672452FD42003F7856 /* NDListView.h in Headers */ = {isa = PBXBuildFile; fileRef = BA69E25E2452FD42003F7856 /* NDListView.h */; };
 		BA69E2682452FD42003F7856 /* NDMutableListViewModel.h in Headers */ = {isa = PBXBuildFile; fileRef = BA69E25F2452FD42003F7856 /* NDMutableListViewModel.h */; };
 		BA69E2692452FD42003F7856 /* NDItemViewModel.h in Headers */ = {isa = PBXBuildFile; fileRef = BA69E2602452FD42003F7856 /* NDItemViewModel.h */; };
@@ -94,6 +132,9 @@
 		BA69E2BF2452FDAD003F7856 /* NDView.h in Copy Files Views */ = {isa = PBXBuildFile; fileRef = BA69E2972452FD5A003F7856 /* NDView.h */; };
 		BA69E2C02452FDAD003F7856 /* NDViewController.h in Copy Files Views */ = {isa = PBXBuildFile; fileRef = BA69E28D2452FD5A003F7856 /* NDViewController.h */; };
 		BA69E2C12452FDAD003F7856 /* NDViewWrapperViewController.h in Copy Files Views */ = {isa = PBXBuildFile; fileRef = BA69E2942452FD5A003F7856 /* NDViewWrapperViewController.h */; };
+		BA6EEA7524A9F09B00B61EC2 /* NDMutableListViewModelHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = BA6EEA7324A9F09A00B61EC2 /* NDMutableListViewModelHelper.h */; };
+		BA6EEA7624A9F09B00B61EC2 /* NDMutableListViewModelHelper.mm in Sources */ = {isa = PBXBuildFile; fileRef = BA6EEA7424A9F09A00B61EC2 /* NDMutableListViewModelHelper.mm */; };
+		BA6EEA7824AB460E00B61EC2 /* NDMutableListViewModelHelperTests.mm in Sources */ = {isa = PBXBuildFile; fileRef = BA6EEA7724AB460D00B61EC2 /* NDMutableListViewModelHelperTests.mm */; };
 		BAF6B43924610BDD00C26613 /* NDVirtualView.h in Headers */ = {isa = PBXBuildFile; fileRef = BAF6B43724610BDC00C26613 /* NDVirtualView.h */; };
 		BAF6B43A24610BDD00C26613 /* NDVirtualView.mm in Sources */ = {isa = PBXBuildFile; fileRef = BAF6B43824610BDD00C26613 /* NDVirtualView.mm */; };
 		BAF6B43B24611D6600C26613 /* NDVirtualView.h in Copy Files Views */ = {isa = PBXBuildFile; fileRef = BAF6B43724610BDC00C26613 /* NDVirtualView.h */; };
@@ -116,6 +157,11 @@
 			dstPath = Headers/Abstracts;
 			dstSubfolderSpec = 1;
 			files = (
+				BA3379BA24E1A6AD0061B1DC /* NDRefeshableView.h in Copy Files Abstracts */,
+				BA3379BB24E1A6AD0061B1DC /* NDRefeshableViewModel.h in Copy Files Abstracts */,
+				BA4793EF24B9B083001E4F1D /* NDAppearableViewModel.h in Copy Files Abstracts */,
+				BA3B859A24B72C8100624DA9 /* NDContentHeightAdjustableView.h in Copy Files Abstracts */,
+				BA3B859B24B72C8100624DA9 /* NDContentHeightAdjustableViewModel.h in Copy Files Abstracts */,
 				BA69E2A62452FD89003F7856 /* NDItemViewModel.h in Copy Files Abstracts */,
 				BA69E2A72452FD89003F7856 /* NDListView.h in Copy Files Abstracts */,
 				BA69E2A82452FD89003F7856 /* NDListViewModel.h in Copy Files Abstracts */,
@@ -135,6 +181,11 @@
 			dstPath = Headers/ViewModels;
 			dstSubfolderSpec = 1;
 			files = (
+				BA4793F024B9B092001E4F1D /* NDAppearableItemViewModel.h in Copy Files ViewModels */,
+				BA3B859F24B72CDE00624DA9 /* NDContentHeightAdjustableViewModel.h in Copy Files ViewModels */,
+				BA3B85A024B72CDE00624DA9 /* NDContentHeightAdjustableItemViewModel.h in Copy Files ViewModels */,
+				BA3B85A124B72CDE00624DA9 /* NDSelectableContentHeightAdjustableItemViewModel.h in Copy Files ViewModels */,
+				BA241AA824922C8E00CC5383 /* NDSelectableItemViewModel.h in Copy Files ViewModels */,
 				BA69E2AF2452FD94003F7856 /* NDItemViewModel.h in Copy Files ViewModels */,
 				BA69E2B12452FD94003F7856 /* NDListViewModel.h in Copy Files ViewModels */,
 				BA69E2B32452FD94003F7856 /* NDMutableListViewModel.h in Copy Files ViewModels */,
@@ -151,14 +202,15 @@
 			dstPath = Headers/Views;
 			dstSubfolderSpec = 1;
 			files = (
+				BA00195224BEB8E1000A3B1C /* NDCollectionViewController+NDSelectableItemViewModel.h in Copy Files Views */,
+				BA4793F124B9B0A7001E4F1D /* NDTableViewController+NDAppearableItemViewModel.h in Copy Files Views */,
+				BA3B859C24B72CBB00624DA9 /* NDContentHeightAdjustableTableViewCell.h in Copy Files Views */,
+				BA3B859D24B72CBB00624DA9 /* NDTableViewController+NDContentHeightAdjustableTableViewCell.h in Copy Files Views */,
+				BA3B859E24B72CBB00624DA9 /* NDTableViewController+NDSelectableItemViewModel.h in Copy Files Views */,
 				BA65DBD0248115B800736B2C /* NDMutableCollectionViewController.h in Copy Files Views */,
-				BA65DBD1248115B800736B2C /* NDSelectableMutableCollectionViewController.h in Copy Files Views */,
-				BA65DBD2248115B800736B2C /* NDSelectableCollectionViewController.h in Copy Files Views */,
 				BA65DBD3248115B800736B2C /* NDCollectionViewController.h in Copy Files Views */,
 				BA65DBD4248115B800736B2C /* NDCollectionViewCell.h in Copy Files Views */,
 				BA65DBD5248115B800736B2C /* NDMutableTableViewController.h in Copy Files Views */,
-				BA65DBD6248115B800736B2C /* NDSelectableTableViewController.h in Copy Files Views */,
-				BA65DBD7248115B800736B2C /* NDSelectableMutableTableViewController.h in Copy Files Views */,
 				BA65DBD8248115B800736B2C /* NDTableViewCell.h in Copy Files Views */,
 				BA65DBD9248115B800736B2C /* NDTableViewController.h in Copy Files Views */,
 				BAF6B43B24611D6600C26613 /* NDVirtualView.h in Copy Files Views */,
@@ -170,6 +222,17 @@
 			name = "Copy Files Views";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		BA4DD53224D7EC0F0060EC37 /* Copy Files Objects */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = Headers/Objects;
+			dstSubfolderSpec = 1;
+			files = (
+				BA4DD53324D7EC330060EC37 /* NDEvent.h in Copy Files Objects */,
+			);
+			name = "Copy Files Objects";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
@@ -178,6 +241,8 @@
 		85EA44B09442C227759C72A9 /* Pods_NDMVVM_NDMVVMTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NDMVVM_NDMVVMTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		868D7BF65686D12D3C537CB0 /* Pods-NDMVVM.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NDMVVM.release.xcconfig"; path = "Target Support Files/Pods-NDMVVM/Pods-NDMVVM.release.xcconfig"; sourceTree = "<group>"; };
 		96FB7BB5201B4CF1565A63F7 /* Pods_NDMVVM.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NDMVVM.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BA00194E24BEB76A000A3B1C /* NDCollectionViewController+NDSelectableItemViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NDCollectionViewController+NDSelectableItemViewModel.h"; sourceTree = "<group>"; };
+		BA00194F24BEB76A000A3B1C /* NDCollectionViewController+NDSelectableItemViewModel.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = "NDCollectionViewController+NDSelectableItemViewModel.mm"; sourceTree = "<group>"; };
 		BA0D890523D6A95300D49166 /* NDMVVM.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NDMVVM.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA0D890823D6A95300D49166 /* NDMVVM.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NDMVVM.h; sourceTree = "<group>"; };
 		BA0D890923D6A95300D49166 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -187,28 +252,52 @@
 		BA0D897923D6B18800D49166 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		BA0D897B23D6B18E00D49166 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		BA241A9B249102C700CC5383 /* NDMVVM.modulemap */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.module-map"; path = NDMVVM.modulemap; sourceTree = "<group>"; };
+		BA241AA4249229C500CC5383 /* NDSelectableItemViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NDSelectableItemViewModel.h; sourceTree = "<group>"; };
+		BA241AA5249229C500CC5383 /* NDSelectableItemViewModel.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = NDSelectableItemViewModel.mm; sourceTree = "<group>"; };
+		BA3379AE24E1A5C20061B1DC /* NDRefeshableView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NDRefeshableView.h; sourceTree = "<group>"; };
+		BA3379B224E1A5CF0061B1DC /* NDRefeshableViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NDRefeshableViewModel.h; sourceTree = "<group>"; };
+		BA3379B724E1A6660061B1DC /* NDRefeshableViewModel.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = NDRefeshableViewModel.mm; sourceTree = "<group>"; };
+		BA3B856324B6D70700624DA9 /* NDTableViewController+NDSelectableItemViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NDTableViewController+NDSelectableItemViewModel.h"; sourceTree = "<group>"; };
+		BA3B856424B6D70700624DA9 /* NDTableViewController+NDSelectableItemViewModel.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = "NDTableViewController+NDSelectableItemViewModel.mm"; sourceTree = "<group>"; };
+		BA3B857224B6F38100624DA9 /* NDContentHeightAdjustableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NDContentHeightAdjustableView.h; sourceTree = "<group>"; };
+		BA3B857324B6F38100624DA9 /* NDContentHeightAdjustableViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NDContentHeightAdjustableViewModel.h; sourceTree = "<group>"; };
+		BA3B857624B6F39E00624DA9 /* NDContentHeightAdjustableViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NDContentHeightAdjustableViewModel.h; sourceTree = "<group>"; };
+		BA3B857724B6F39E00624DA9 /* NDContentHeightAdjustableViewModel.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = NDContentHeightAdjustableViewModel.mm; sourceTree = "<group>"; };
+		BA3B857A24B6F3B000624DA9 /* NDContentHeightAdjustableTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NDContentHeightAdjustableTableViewCell.h; sourceTree = "<group>"; };
+		BA3B857B24B6F3B000624DA9 /* NDContentHeightAdjustableTableViewCell.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = NDContentHeightAdjustableTableViewCell.mm; sourceTree = "<group>"; };
+		BA3B857E24B6F47600624DA9 /* NDViewDefaultImpl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NDViewDefaultImpl.h; sourceTree = "<group>"; };
+		BA3B857F24B6F47600624DA9 /* NDViewDefaultImpl.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = NDViewDefaultImpl.mm; sourceTree = "<group>"; };
+		BA3B858224B6F51800624DA9 /* NDViewModelDefaultImpl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NDViewModelDefaultImpl.h; sourceTree = "<group>"; };
+		BA3B858324B6F51800624DA9 /* NDViewModelDefaultImpl.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = NDViewModelDefaultImpl.mm; sourceTree = "<group>"; };
+		BA3B858A24B6FA6F00624DA9 /* NDContentHeightAdjustableViewModelDefaultImpl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NDContentHeightAdjustableViewModelDefaultImpl.h; sourceTree = "<group>"; };
+		BA3B858B24B6FA6F00624DA9 /* NDContentHeightAdjustableViewModelDefaultImpl.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = NDContentHeightAdjustableViewModelDefaultImpl.mm; sourceTree = "<group>"; };
+		BA3B858E24B7057A00624DA9 /* NDTableViewController+NDContentHeightAdjustableTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NDTableViewController+NDContentHeightAdjustableTableViewCell.h"; sourceTree = "<group>"; };
+		BA3B858F24B7057A00624DA9 /* NDTableViewController+NDContentHeightAdjustableTableViewCell.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = "NDTableViewController+NDContentHeightAdjustableTableViewCell.mm"; sourceTree = "<group>"; };
+		BA3B859224B72A2C00624DA9 /* NDContentHeightAdjustableItemViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NDContentHeightAdjustableItemViewModel.h; sourceTree = "<group>"; };
+		BA3B859324B72A2C00624DA9 /* NDContentHeightAdjustableItemViewModel.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = NDContentHeightAdjustableItemViewModel.mm; sourceTree = "<group>"; };
+		BA3B859624B72A6F00624DA9 /* NDSelectableContentHeightAdjustableItemViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NDSelectableContentHeightAdjustableItemViewModel.h; sourceTree = "<group>"; };
+		BA3B859724B72A6F00624DA9 /* NDSelectableContentHeightAdjustableItemViewModel.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = NDSelectableContentHeightAdjustableItemViewModel.mm; sourceTree = "<group>"; };
+		BA4793D824B87BC0001E4F1D /* NDContentHeightAdjustableViewDefaultImpl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NDContentHeightAdjustableViewDefaultImpl.h; sourceTree = "<group>"; };
+		BA4793D924B87BC0001E4F1D /* NDContentHeightAdjustableViewDefaultImpl.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = NDContentHeightAdjustableViewDefaultImpl.mm; sourceTree = "<group>"; };
+		BA4793DF24B9AA96001E4F1D /* NDAppearableViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NDAppearableViewModel.h; sourceTree = "<group>"; };
+		BA4793E724B9AC44001E4F1D /* NDAppearableItemViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NDAppearableItemViewModel.h; sourceTree = "<group>"; };
+		BA4793E824B9AC44001E4F1D /* NDAppearableItemViewModel.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = NDAppearableItemViewModel.mm; sourceTree = "<group>"; };
+		BA4793EB24B9AD55001E4F1D /* NDTableViewController+NDAppearableItemViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NDTableViewController+NDAppearableItemViewModel.h"; sourceTree = "<group>"; };
+		BA4793EC24B9AD55001E4F1D /* NDTableViewController+NDAppearableItemViewModel.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = "NDTableViewController+NDAppearableItemViewModel.mm"; sourceTree = "<group>"; };
+		BA4DD52E24D7EBC10060EC37 /* NDEvent.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NDEvent.h; sourceTree = "<group>"; };
+		BA4DD52F24D7EBC10060EC37 /* NDEvent.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = NDEvent.mm; sourceTree = "<group>"; };
 		BA65DB972480FC1C00736B2C /* NDCollectionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NDCollectionViewController.h; sourceTree = "<group>"; };
 		BA65DB982480FC1C00736B2C /* NDCollectionViewController.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = NDCollectionViewController.mm; sourceTree = "<group>"; };
 		BA65DBA52481024900736B2C /* NDCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NDCollectionViewCell.h; sourceTree = "<group>"; };
 		BA65DBA62481024900736B2C /* NDCollectionViewCell.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = NDCollectionViewCell.mm; sourceTree = "<group>"; };
 		BA65DBAF248108F500736B2C /* NDMutableTableViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = NDMutableTableViewController.mm; sourceTree = "<group>"; };
-		BA65DBB0248108F500736B2C /* NDSelectableTableViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = NDSelectableTableViewController.mm; sourceTree = "<group>"; };
-		BA65DBB1248108F500736B2C /* NDSelectableTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NDSelectableTableViewController.h; sourceTree = "<group>"; };
 		BA65DBB2248108F500736B2C /* NDTableViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = NDTableViewController.mm; sourceTree = "<group>"; };
 		BA65DBB3248108F500736B2C /* NDTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NDTableViewController.h; sourceTree = "<group>"; };
 		BA65DBB4248108F500736B2C /* NDTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NDTableViewCell.h; sourceTree = "<group>"; };
 		BA65DBB5248108F500736B2C /* NDMutableTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NDMutableTableViewController.h; sourceTree = "<group>"; };
 		BA65DBB6248108F500736B2C /* NDTableViewCell.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = NDTableViewCell.mm; sourceTree = "<group>"; };
-		BA65DBC024810AF000736B2C /* NDSelectableMutableTableViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = NDSelectableMutableTableViewController.mm; sourceTree = "<group>"; };
-		BA65DBC124810AF000736B2C /* NDSelectableMutableTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NDSelectableMutableTableViewController.h; sourceTree = "<group>"; };
-		BA65DBC42481127600736B2C /* NDSelectableCollectionViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = NDSelectableCollectionViewController.mm; sourceTree = "<group>"; };
 		BA65DBC52481127600736B2C /* NDMutableCollectionViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = NDMutableCollectionViewController.mm; sourceTree = "<group>"; };
-		BA65DBC62481127700736B2C /* NDSelectableMutableCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NDSelectableMutableCollectionViewController.h; sourceTree = "<group>"; };
-		BA65DBC72481127700736B2C /* NDSelectableMutableCollectionViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = NDSelectableMutableCollectionViewController.mm; sourceTree = "<group>"; };
 		BA65DBC82481127700736B2C /* NDMutableCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NDMutableCollectionViewController.h; sourceTree = "<group>"; };
-		BA65DBC92481127700736B2C /* NDSelectableCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NDSelectableCollectionViewController.h; sourceTree = "<group>"; };
-		BA69E2562452F8B4003F7856 /* NDUtils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NDUtils.h; sourceTree = "<group>"; };
-		BA69E2572452F8B4003F7856 /* NDUtils.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = NDUtils.mm; sourceTree = "<group>"; };
 		BA69E25E2452FD42003F7856 /* NDListView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NDListView.h; path = NDMVVM/Abstracts/NDListView.h; sourceTree = SOURCE_ROOT; };
 		BA69E25F2452FD42003F7856 /* NDMutableListViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NDMutableListViewModel.h; path = NDMVVM/Abstracts/NDMutableListViewModel.h; sourceTree = SOURCE_ROOT; };
 		BA69E2602452FD42003F7856 /* NDItemViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NDItemViewModel.h; path = NDMVVM/Abstracts/NDItemViewModel.h; sourceTree = SOURCE_ROOT; };
@@ -239,6 +328,9 @@
 		BA69E2932452FD5A003F7856 /* NDTabBarController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = NDTabBarController.mm; path = NDMVVM/Views/NDTabBarController.mm; sourceTree = SOURCE_ROOT; };
 		BA69E2942452FD5A003F7856 /* NDViewWrapperViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NDViewWrapperViewController.h; path = NDMVVM/Views/NDViewWrapperViewController.h; sourceTree = SOURCE_ROOT; };
 		BA69E2972452FD5A003F7856 /* NDView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NDView.h; path = NDMVVM/Views/NDView.h; sourceTree = SOURCE_ROOT; };
+		BA6EEA7324A9F09A00B61EC2 /* NDMutableListViewModelHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NDMutableListViewModelHelper.h; sourceTree = "<group>"; };
+		BA6EEA7424A9F09A00B61EC2 /* NDMutableListViewModelHelper.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = NDMutableListViewModelHelper.mm; sourceTree = "<group>"; };
+		BA6EEA7724AB460D00B61EC2 /* NDMutableListViewModelHelperTests.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = NDMutableListViewModelHelperTests.mm; sourceTree = "<group>"; };
 		BAF6B43724610BDC00C26613 /* NDVirtualView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NDVirtualView.h; sourceTree = "<group>"; };
 		BAF6B43824610BDD00C26613 /* NDVirtualView.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = NDVirtualView.mm; sourceTree = "<group>"; };
 		BAFD7FBB247F859100EC8CF3 /* swift-format */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = "swift-format"; sourceTree = "<group>"; };
@@ -248,7 +340,7 @@
 		BAFD7FBF247F859100EC8CF3 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		BAFD7FC0247F859100EC8CF3 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		BAFD7FC1247F859100EC8CF3 /* .swift-format */ = {isa = PBXFileReference; lastKnownFileType = text; path = ".swift-format"; sourceTree = "<group>"; };
-		BAFD7FC2247F859100EC8CF3 /* NDMVVM.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = NDMVVM.podspec; sourceTree = "<group>"; };
+		BAFD7FC2247F859100EC8CF3 /* NDMVVM.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = NDMVVM.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		BC4CC27575D75ACD6C024DA1 /* Pods-NDMVVM.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NDMVVM.debug.xcconfig"; path = "Target Support Files/Pods-NDMVVM/Pods-NDMVVM.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -312,6 +404,7 @@
 			isa = PBXGroup;
 			children = (
 				BA0D892A23D6A98C00D49166 /* Abstracts */,
+				BA4DD52D24D7EB9F0060EC37 /* Objects */,
 				BA0D891F23D6A98C00D49166 /* ViewModels */,
 				BA0D893323D6A98C00D49166 /* Views */,
 				BA0D890823D6A95300D49166 /* NDMVVM.h */,
@@ -326,6 +419,7 @@
 			isa = PBXGroup;
 			children = (
 				BA0D891323D6A95300D49166 /* NDMVVMTests.mm */,
+				BA6EEA7724AB460D00B61EC2 /* NDMutableListViewModelHelperTests.mm */,
 				BA0D891523D6A95300D49166 /* Info.plist */,
 			);
 			path = NDMVVMTests;
@@ -341,12 +435,23 @@
 				BA69E2762452FD4F003F7856 /* NDListViewModel.mm */,
 				BA69E2742452FD4F003F7856 /* NDMutableListViewModel.h */,
 				BA69E27B2452FD4F003F7856 /* NDMutableListViewModel.mm */,
+				BA3B857624B6F39E00624DA9 /* NDContentHeightAdjustableViewModel.h */,
+				BA3B857724B6F39E00624DA9 /* NDContentHeightAdjustableViewModel.mm */,
 				BA69E27A2452FD4F003F7856 /* NDSelectableViewModel.h */,
 				BA69E2752452FD4F003F7856 /* NDSelectableViewModel.mm */,
 				BA69E2782452FD4F003F7856 /* NDSingleSubItemViewModel.h */,
 				BA69E2772452FD4F003F7856 /* NDSingleSubItemViewModel.mm */,
 				BA69E2722452FD4E003F7856 /* NDViewModel.h */,
 				BA69E27C2452FD4F003F7856 /* NDViewModel.mm */,
+				BA241AA4249229C500CC5383 /* NDSelectableItemViewModel.h */,
+				BA241AA5249229C500CC5383 /* NDSelectableItemViewModel.mm */,
+				BA3B859224B72A2C00624DA9 /* NDContentHeightAdjustableItemViewModel.h */,
+				BA3B859324B72A2C00624DA9 /* NDContentHeightAdjustableItemViewModel.mm */,
+				BA3B859624B72A6F00624DA9 /* NDSelectableContentHeightAdjustableItemViewModel.h */,
+				BA3B859724B72A6F00624DA9 /* NDSelectableContentHeightAdjustableItemViewModel.mm */,
+				BA4793E724B9AC44001E4F1D /* NDAppearableItemViewModel.h */,
+				BA4793E824B9AC44001E4F1D /* NDAppearableItemViewModel.mm */,
+				BA3379B724E1A6660061B1DC /* NDRefeshableViewModel.mm */,
 			);
 			name = ViewModels;
 			path = NDMVVM/ViewModels;
@@ -360,10 +465,15 @@
 				BA69E2662452FD42003F7856 /* NDListViewModel.h */,
 				BA69E2642452FD42003F7856 /* NDMutableListView.h */,
 				BA69E25F2452FD42003F7856 /* NDMutableListViewModel.h */,
+				BA3B857224B6F38100624DA9 /* NDContentHeightAdjustableView.h */,
+				BA3B857324B6F38100624DA9 /* NDContentHeightAdjustableViewModel.h */,
 				BA69E2622452FD42003F7856 /* NDSelectableViewModel.h */,
 				BA69E2632452FD42003F7856 /* NDSingleSubViewModel.h */,
 				BA69E2612452FD42003F7856 /* NDView.h */,
 				BA69E2652452FD42003F7856 /* NDViewModel.h */,
+				BA4793DF24B9AA96001E4F1D /* NDAppearableViewModel.h */,
+				BA3379AE24E1A5C20061B1DC /* NDRefeshableView.h */,
+				BA3379B224E1A5CF0061B1DC /* NDRefeshableViewModel.h */,
 			);
 			name = Abstracts;
 			path = NDMVVM/Abstracts;
@@ -404,8 +514,19 @@
 			isa = PBXGroup;
 			children = (
 				BA69E2732452FD4E003F7856 /* NDListViewModel+Protected.h */,
+				BA6EEA7324A9F09A00B61EC2 /* NDMutableListViewModelHelper.h */,
+				BA6EEA7424A9F09A00B61EC2 /* NDMutableListViewModelHelper.mm */,
 			);
 			path = Privates;
+			sourceTree = "<group>";
+		};
+		BA4DD52D24D7EB9F0060EC37 /* Objects */ = {
+			isa = PBXGroup;
+			children = (
+				BA4DD52E24D7EBC10060EC37 /* NDEvent.h */,
+				BA4DD52F24D7EBC10060EC37 /* NDEvent.mm */,
+			);
+			path = Objects;
 			sourceTree = "<group>";
 		};
 		BA65DBAE248108A800736B2C /* NDTableViewController */ = {
@@ -413,14 +534,18 @@
 			children = (
 				BA65DBB5248108F500736B2C /* NDMutableTableViewController.h */,
 				BA65DBAF248108F500736B2C /* NDMutableTableViewController.mm */,
-				BA65DBB1248108F500736B2C /* NDSelectableTableViewController.h */,
-				BA65DBB0248108F500736B2C /* NDSelectableTableViewController.mm */,
-				BA65DBC124810AF000736B2C /* NDSelectableMutableTableViewController.h */,
-				BA65DBC024810AF000736B2C /* NDSelectableMutableTableViewController.mm */,
+				BA3B857A24B6F3B000624DA9 /* NDContentHeightAdjustableTableViewCell.h */,
+				BA3B857B24B6F3B000624DA9 /* NDContentHeightAdjustableTableViewCell.mm */,
 				BA65DBB4248108F500736B2C /* NDTableViewCell.h */,
 				BA65DBB6248108F500736B2C /* NDTableViewCell.mm */,
 				BA65DBB3248108F500736B2C /* NDTableViewController.h */,
 				BA65DBB2248108F500736B2C /* NDTableViewController.mm */,
+				BA3B858E24B7057A00624DA9 /* NDTableViewController+NDContentHeightAdjustableTableViewCell.h */,
+				BA3B858F24B7057A00624DA9 /* NDTableViewController+NDContentHeightAdjustableTableViewCell.mm */,
+				BA3B856324B6D70700624DA9 /* NDTableViewController+NDSelectableItemViewModel.h */,
+				BA3B856424B6D70700624DA9 /* NDTableViewController+NDSelectableItemViewModel.mm */,
+				BA4793EB24B9AD55001E4F1D /* NDTableViewController+NDAppearableItemViewModel.h */,
+				BA4793EC24B9AD55001E4F1D /* NDTableViewController+NDAppearableItemViewModel.mm */,
 			);
 			name = NDTableViewController;
 			sourceTree = "<group>";
@@ -430,14 +555,12 @@
 			children = (
 				BA65DBC82481127700736B2C /* NDMutableCollectionViewController.h */,
 				BA65DBC52481127600736B2C /* NDMutableCollectionViewController.mm */,
-				BA65DBC62481127700736B2C /* NDSelectableMutableCollectionViewController.h */,
-				BA65DBC72481127700736B2C /* NDSelectableMutableCollectionViewController.mm */,
-				BA65DBC92481127700736B2C /* NDSelectableCollectionViewController.h */,
-				BA65DBC42481127600736B2C /* NDSelectableCollectionViewController.mm */,
 				BA65DB972480FC1C00736B2C /* NDCollectionViewController.h */,
 				BA65DB982480FC1C00736B2C /* NDCollectionViewController.mm */,
 				BA65DBA52481024900736B2C /* NDCollectionViewCell.h */,
 				BA65DBA62481024900736B2C /* NDCollectionViewCell.mm */,
+				BA00194E24BEB76A000A3B1C /* NDCollectionViewController+NDSelectableItemViewModel.h */,
+				BA00194F24BEB76A000A3B1C /* NDCollectionViewController+NDSelectableItemViewModel.mm */,
 			);
 			name = NDCollectionViewController;
 			sourceTree = "<group>";
@@ -468,8 +591,14 @@
 		BAFD7FC4247F86E900EC8CF3 /* Privates */ = {
 			isa = PBXGroup;
 			children = (
-				BA69E2562452F8B4003F7856 /* NDUtils.h */,
-				BA69E2572452F8B4003F7856 /* NDUtils.mm */,
+				BA3B857E24B6F47600624DA9 /* NDViewDefaultImpl.h */,
+				BA3B857F24B6F47600624DA9 /* NDViewDefaultImpl.mm */,
+				BA3B858224B6F51800624DA9 /* NDViewModelDefaultImpl.h */,
+				BA3B858324B6F51800624DA9 /* NDViewModelDefaultImpl.mm */,
+				BA4793D824B87BC0001E4F1D /* NDContentHeightAdjustableViewDefaultImpl.h */,
+				BA4793D924B87BC0001E4F1D /* NDContentHeightAdjustableViewDefaultImpl.mm */,
+				BA3B858A24B6FA6F00624DA9 /* NDContentHeightAdjustableViewModelDefaultImpl.h */,
+				BA3B858B24B6FA6F00624DA9 /* NDContentHeightAdjustableViewModelDefaultImpl.mm */,
 			);
 			path = Privates;
 			sourceTree = "<group>";
@@ -481,37 +610,53 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BA3B857824B6F39E00624DA9 /* NDContentHeightAdjustableViewModel.h in Headers */,
 				BA69E2672452FD42003F7856 /* NDListView.h in Headers */,
 				BA69E26A2452FD42003F7856 /* NDView.h in Headers */,
 				BA69E2812452FD4F003F7856 /* NDMutableListViewModel.h in Headers */,
 				BAF6B43924610BDD00C26613 /* NDVirtualView.h in Headers */,
 				BA69E2692452FD42003F7856 /* NDItemViewModel.h in Headers */,
-				BA69E2582452F8B4003F7856 /* NDUtils.h in Headers */,
 				BA65DB992480FC1C00736B2C /* NDCollectionViewController.h in Headers */,
+				BA4793DA24B87BC0001E4F1D /* NDContentHeightAdjustableViewDefaultImpl.h in Headers */,
 				BA69E2A22452FD5A003F7856 /* NDViewWrapperViewController.h in Headers */,
+				BA4793ED24B9AD55001E4F1D /* NDTableViewController+NDAppearableItemViewModel.h in Headers */,
 				BA69E2682452FD42003F7856 /* NDMutableListViewModel.h in Headers */,
 				BA69E29E2452FD5A003F7856 /* NDTabBarController.h in Headers */,
+				BA3B858424B6F51800624DA9 /* NDViewModelDefaultImpl.h in Headers */,
+				BA3B858C24B6FA6F00624DA9 /* NDContentHeightAdjustableViewModelDefaultImpl.h in Headers */,
 				BA69E29B2452FD5A003F7856 /* NDViewController.h in Headers */,
+				BA4793E124B9AA96001E4F1D /* NDAppearableViewModel.h in Headers */,
 				BA69E27F2452FD4F003F7856 /* NDViewModel.h in Headers */,
+				BA3B859424B72A2C00624DA9 /* NDContentHeightAdjustableItemViewModel.h in Headers */,
 				BA65DBBC248108F500736B2C /* NDTableViewCell.h in Headers */,
+				BA3B857524B6F38200624DA9 /* NDContentHeightAdjustableViewModel.h in Headers */,
 				BA0D891623D6A95300D49166 /* NDMVVM.h in Headers */,
-				BA65DBCF2481127700736B2C /* NDSelectableCollectionViewController.h in Headers */,
+				BA3B857C24B6F3B000624DA9 /* NDContentHeightAdjustableTableViewCell.h in Headers */,
 				BA69E2A52452FD5A003F7856 /* NDView.h in Headers */,
 				BA65DBCE2481127700736B2C /* NDMutableCollectionViewController.h in Headers */,
+				BA4793E924B9AC44001E4F1D /* NDAppearableItemViewModel.h in Headers */,
 				BA69E26C2452FD42003F7856 /* NDSingleSubViewModel.h in Headers */,
+				BA3B858024B6F47600624DA9 /* NDViewDefaultImpl.h in Headers */,
 				BA65DBBB248108F500736B2C /* NDTableViewController.h in Headers */,
+				BA00195024BEB76A000A3B1C /* NDCollectionViewController+NDSelectableItemViewModel.h in Headers */,
+				BA3B857424B6F38200624DA9 /* NDContentHeightAdjustableView.h in Headers */,
 				BA69E26F2452FD42003F7856 /* NDListViewModel.h in Headers */,
+				BA4DD53024D7EBC10060EC37 /* NDEvent.h in Headers */,
 				BA69E2852452FD4F003F7856 /* NDSingleSubItemViewModel.h in Headers */,
 				BA69E2872452FD4F003F7856 /* NDSelectableViewModel.h in Headers */,
+				BA3379B424E1A5CF0061B1DC /* NDRefeshableViewModel.h in Headers */,
 				BA65DBBD248108F500736B2C /* NDMutableTableViewController.h in Headers */,
 				BA69E2802452FD4F003F7856 /* NDListViewModel+Protected.h in Headers */,
-				BA65DBCC2481127700736B2C /* NDSelectableMutableCollectionViewController.h in Headers */,
+				BA3B859024B7057A00624DA9 /* NDTableViewController+NDContentHeightAdjustableTableViewCell.h in Headers */,
 				BA69E26D2452FD42003F7856 /* NDMutableListView.h in Headers */,
-				BA65DBB9248108F500736B2C /* NDSelectableTableViewController.h in Headers */,
+				BA3379B024E1A5C20061B1DC /* NDRefeshableView.h in Headers */,
+				BA6EEA7524A9F09B00B61EC2 /* NDMutableListViewModelHelper.h in Headers */,
+				BA241AA6249229C600CC5383 /* NDSelectableItemViewModel.h in Headers */,
 				BA65DBA72481024900736B2C /* NDCollectionViewCell.h in Headers */,
 				BA69E27D2452FD4F003F7856 /* NDListViewModel.h in Headers */,
+				BA3B859824B72A6F00624DA9 /* NDSelectableContentHeightAdjustableItemViewModel.h in Headers */,
 				BA69E27E2452FD4F003F7856 /* NDItemViewModel.h in Headers */,
-				BA65DBC324810AF000736B2C /* NDSelectableMutableTableViewController.h in Headers */,
+				BA3B856524B6D70800624DA9 /* NDTableViewController+NDSelectableItemViewModel.h in Headers */,
 				BA69E26B2452FD42003F7856 /* NDSelectableViewModel.h in Headers */,
 				BA69E26E2452FD42003F7856 /* NDViewModel.h in Headers */,
 			);
@@ -527,6 +672,7 @@
 				BE780AF2CF5D1D93486FD6FE /* [CP] Check Pods Manifest.lock */,
 				BA0D890023D6A95300D49166 /* Headers */,
 				BA0D895623D6B07F00D49166 /* Copy Files Abstracts */,
+				BA4DD53224D7EC0F0060EC37 /* Copy Files Objects */,
 				BA0D895723D6B08100D49166 /* Copy Files ViewModels */,
 				BA0D895823D6B08500D49166 /* Copy Files Views */,
 				BA0D890123D6A95300D49166 /* Sources */,
@@ -685,27 +831,39 @@
 			buildActionMask = 2147483647;
 			files = (
 				BA65DBBA248108F500736B2C /* NDTableViewController.mm in Sources */,
-				BA65DBC224810AF000736B2C /* NDSelectableMutableTableViewController.mm in Sources */,
-				BA65DBCD2481127700736B2C /* NDSelectableMutableCollectionViewController.mm in Sources */,
+				BA4793EA24B9AC44001E4F1D /* NDAppearableItemViewModel.mm in Sources */,
+				BA3B858D24B6FA6F00624DA9 /* NDContentHeightAdjustableViewModelDefaultImpl.mm in Sources */,
 				BA69E2892452FD4F003F7856 /* NDViewModel.mm in Sources */,
-				BA65DBCA2481127700736B2C /* NDSelectableCollectionViewController.mm in Sources */,
+				BA6EEA7624A9F09B00B61EC2 /* NDMutableListViewModelHelper.mm in Sources */,
 				BA69E2842452FD4F003F7856 /* NDSingleSubItemViewModel.mm in Sources */,
+				BA3B857D24B6F3B000624DA9 /* NDContentHeightAdjustableTableViewCell.mm in Sources */,
+				BA00195124BEB76A000A3B1C /* NDCollectionViewController+NDSelectableItemViewModel.mm in Sources */,
 				BA65DBBE248108F500736B2C /* NDTableViewCell.mm in Sources */,
+				BA3B859124B7057A00624DA9 /* NDTableViewController+NDContentHeightAdjustableTableViewCell.mm in Sources */,
 				BA69E29C2452FD5A003F7856 /* NDViewController.mm in Sources */,
-				BA65DBB8248108F500736B2C /* NDSelectableTableViewController.mm in Sources */,
 				BA69E2882452FD4F003F7856 /* NDMutableListViewModel.mm in Sources */,
 				BA69E2822452FD4F003F7856 /* NDSelectableViewModel.mm in Sources */,
 				BA69E29D2452FD5A003F7856 /* NDViewWrapperViewController.mm in Sources */,
+				BA4793DB24B87BC0001E4F1D /* NDContentHeightAdjustableViewDefaultImpl.mm in Sources */,
 				BA69E2832452FD4F003F7856 /* NDListViewModel.mm in Sources */,
+				BA3B857924B6F39E00624DA9 /* NDContentHeightAdjustableViewModel.mm in Sources */,
 				BA65DBCB2481127700736B2C /* NDMutableCollectionViewController.mm in Sources */,
 				BA69E2A12452FD5A003F7856 /* NDTabBarController.mm in Sources */,
+				BA3B858524B6F51800624DA9 /* NDViewModelDefaultImpl.mm in Sources */,
+				BA3B858124B6F47600624DA9 /* NDViewDefaultImpl.mm in Sources */,
 				BA65DBB7248108F500736B2C /* NDMutableTableViewController.mm in Sources */,
-				BA69E2592452F8B4003F7856 /* NDUtils.mm in Sources */,
+				BA3B859524B72A2C00624DA9 /* NDContentHeightAdjustableItemViewModel.mm in Sources */,
+				BA4793EE24B9AD55001E4F1D /* NDTableViewController+NDAppearableItemViewModel.mm in Sources */,
 				BA65DB9A2480FC1C00736B2C /* NDCollectionViewController.mm in Sources */,
 				BA69E2992452FD5A003F7856 /* NDView.mm in Sources */,
+				BA241AA7249229C600CC5383 /* NDSelectableItemViewModel.mm in Sources */,
+				BA4DD53124D7EBC10060EC37 /* NDEvent.mm in Sources */,
 				BA65DBA82481024900736B2C /* NDCollectionViewCell.mm in Sources */,
+				BA3B856624B6D70800624DA9 /* NDTableViewController+NDSelectableItemViewModel.mm in Sources */,
 				BA69E2862452FD4F003F7856 /* NDItemViewModel.mm in Sources */,
+				BA3379B924E1A6660061B1DC /* NDRefeshableViewModel.mm in Sources */,
 				BAF6B43A24610BDD00C26613 /* NDVirtualView.mm in Sources */,
+				BA3B859924B72A6F00624DA9 /* NDSelectableContentHeightAdjustableItemViewModel.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -714,6 +872,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BA0D891423D6A95300D49166 /* NDMVVMTests.mm in Sources */,
+				BA6EEA7824AB460E00B61EC2 /* NDMutableListViewModelHelperTests.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
