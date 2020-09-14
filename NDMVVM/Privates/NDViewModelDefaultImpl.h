@@ -12,17 +12,19 @@
 NS_ASSUME_NONNULL_BEGIN
 
 namespace nd {
+namespace mvvm {
 template <typename RType>
-inline RType View(id<NDViewModel> self) {
+inline RType RView(id<NDViewModel> self) {
   return (RType)self.view;
 }
+}  // namespace mvvm
 }  // namespace nd
 
-#define View_Default_Impl(RType)                \
-  namespace {                                   \
-  inline id<RType> View(id<NDViewModel> self) { \
-    return nd::View<id<RType>>(self);           \
-  }                                             \
+#define NDViewModel_RView_Default_Impl(RType)    \
+  namespace {                                    \
+  inline id<RType> RView(id<NDViewModel> self) { \
+    return nd::mvvm::RView<id<RType>>(self);     \
+  }                                              \
   }
 
 NS_ASSUME_NONNULL_END

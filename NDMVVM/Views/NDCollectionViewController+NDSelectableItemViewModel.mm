@@ -45,6 +45,6 @@
 }
 
 // MARK: - Privates
-ViewModel_Default_Impl(NDListViewModel);
+NDView_ViewModel_Default_Impl(NDListViewModel);
 
 @end

@@ -38,8 +38,8 @@
     "NDLog": [
       "~> 0.0.4"
     ],
-    "NDUtils": [
-      "~> 0.0.3"
+    "NDUtils/objc": [
+      "~> 0.0.4"
     ]
   },
   "swift_version": "5.2"

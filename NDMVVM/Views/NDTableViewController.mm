@@ -36,7 +36,7 @@ using namespace nd;
   self.prepareCellForRowAtIndexPathHandler =
       ^(NDTableViewController* self, NDTableViewCell* cell,
         NSIndexPath* indexPath) {
-        NDRoute([ViewModel(self) viewModelForItem:indexPath.row], cell);
+        NDConnect([ViewModel(self) viewModelForItem:indexPath.row], cell);
       };
 }
 
@@ -56,6 +56,6 @@ using namespace nd;
 
 // MARK: - Privates
 
-ViewModel_Default_Impl(NDListViewModel);
+NDView_ViewModel_Default_Impl(NDListViewModel);
 
 @end

@@ -19,7 +19,7 @@ inline RType ViewModel(id<NDView> self) {
 }
 }
 
-#define ViewModel_Default_Impl(RType)           \
+#define NDView_ViewModel_Default_Impl(RType)    \
   namespace {                                   \
   inline id<RType> ViewModel(id<NDView> self) { \
     return nd::ViewModel<id<RType>>(self);      \

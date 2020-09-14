@@ -8,7 +8,7 @@
 
 #import <NDMVVM/Abstracts/NDViewModel.h>
 
-#import <NDMVVM/Objects/NDEvent.h>
+#import <NDUtils/NDUtils.h>
 
 NS_ASSUME_NONNULL_BEGIN
 

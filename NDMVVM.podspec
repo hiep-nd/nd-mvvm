@@ -24,7 +24,7 @@ Pod::Spec.new do |s|
   s.framework = 'Foundation', 'UIKit'
   s.module_map = 'NDMVVM/NDMVVM.modulemap'
   
-  s.dependency 'NDLog', '~> 0.0.4'
-  s.dependency 'NDManualObjects', '~> 0.0.6'
-  s.dependency 'NDUtils', '~> 0.0.4'
+  s.dependency 'NDLog', '~> 0.0.5'
+  s.dependency 'NDManualObjects', '~> 0.0.7'
+  s.dependency 'NDUtils/objc', '~> 0.0.4'
 end

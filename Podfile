@@ -12,7 +12,7 @@ target 'NDMVVM' do
   # Development
   pod 'NDLog', :path => '../NDLog'
   pod 'NDManualObjects', :path => '../NDManualObjects'
-  pod 'NDUtils', :path => '../NDUtils'
+  pod 'NDUtils/Core', :path => '../NDUtils'
   
   target 'NDMVVMTests' do
     # Pods for testing

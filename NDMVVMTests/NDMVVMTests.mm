@@ -16,11 +16,11 @@
 
 @implementation NDMVVMTests
 
-- (void)testRouteInvalid {
+- (void)testConnectInvalid {
   auto view = [[NDTableViewController alloc] init];
   auto viewModel = [[NDViewModel alloc] init];
   @try {
-    NDRoute(viewModel, view);
+    NDConnect(viewModel, view);
   } @catch (NSException* exception) {
     XCTAssertNotNil(exception);
   } @finally {

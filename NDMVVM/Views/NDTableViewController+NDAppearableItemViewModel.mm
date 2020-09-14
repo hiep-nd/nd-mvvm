@@ -12,7 +12,7 @@
 #import <NDMVVM/Abstracts/NDItemViewModel.h>
 #import <NDMVVM/Abstracts/NDListViewModel.h>
 
-#import <NDMVVM/Objects/NDEvent.h>
+#import <NDUtils/NDUtils.h>
 
 #import <NDMVVM/Views/NDTableViewCell.h>
 
@@ -53,6 +53,6 @@
 }
 
 // MARK: -Privates
-ViewModel_Default_Impl(NDListViewModel);
+NDView_ViewModel_Default_Impl(NDListViewModel);
 
 @end

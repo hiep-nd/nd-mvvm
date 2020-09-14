@@ -17,7 +17,7 @@ NS_SWIFT_NAME(NDViewModelProtocol)
 
 /**
  The view. Don't use the setter unless you have got strong reason, use the
- NDRoute instead.
+ NDConnect instead.
  */
 @property(nonatomic, weak) __kindof id<NDView> _Nullable view;
 - (BOOL)validateView:(__kindof id<NDView>)view;
@@ -26,15 +26,15 @@ NS_SWIFT_NAME(NDViewModelProtocol)
 @end
 
 /**
- Route the view and view model. It creates a 2-way relationship of view and view
- model.
+ Connect the view and view model. It creates a 2-way relationship of view and
+ view model.
 
  @param viewModel The view model.
  @param view The view.
  */
 FOUNDATION_EXPORT
-void NDRoute(__kindof id<NDViewModel> _Nullable viewModel,
-             __kindof id<NDView> _Nullable view)
-    NS_SWIFT_NAME(nd_route(viewModel:view:));
+void NDConnect(__kindof id<NDViewModel> _Nullable viewModel,
+               __kindof id<NDView> _Nullable view)
+    NS_SWIFT_NAME(nd_connect(viewModel:view:));
 
 NS_ASSUME_NONNULL_END

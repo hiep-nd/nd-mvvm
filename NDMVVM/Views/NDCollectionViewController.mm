@@ -35,7 +35,7 @@ using namespace nd;
     NDCollectionViewCell* cell = [self.collectionView
         dequeueReusableCellWithReuseIdentifier:cellViewModel.identifier
                                   forIndexPath:indexPath];
-    NDRoute(cellViewModel, cell);
+    NDConnect(cellViewModel, cell);
     return cell;
   };
 }
@@ -53,6 +53,6 @@ using namespace nd;
 
 // MARK: - Privates
 
-ViewModel_Default_Impl(NDListViewModel);
+NDView_ViewModel_Default_Impl(NDListViewModel);
 
 @end

@@ -22,14 +22,12 @@ FOUNDATION_EXPORT const unsigned char NDMVVMVersionString[];
 #import <NDMVVM/Abstracts/NDListViewModel.h>
 #import <NDMVVM/Abstracts/NDMutableListView.h>
 #import <NDMVVM/Abstracts/NDMutableListViewModel.h>
-#import <NDMVVM/Abstracts/NDRefeshableView.h>
-#import <NDMVVM/Abstracts/NDRefeshableViewModel.h>
+#import <NDMVVM/Abstracts/NDRefreshableView.h>
+#import <NDMVVM/Abstracts/NDRefreshableViewModel.h>
 #import <NDMVVM/Abstracts/NDSelectableViewModel.h>
 #import <NDMVVM/Abstracts/NDSingleSubViewModel.h>
 #import <NDMVVM/Abstracts/NDView.h>
 #import <NDMVVM/Abstracts/NDViewModel.h>
-
-#import <NDMVVM/Objects/NDEvent.h>
 
 #import <NDMVVM/ViewModels/NDAppearableItemViewModel.h>
 #import <NDMVVM/ViewModels/NDContentHeightAdjustableItemViewModel.h>

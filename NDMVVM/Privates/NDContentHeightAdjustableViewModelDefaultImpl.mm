@@ -13,7 +13,7 @@
 - (void)on {
   [super on];
 
-  [nd::View<id<NDContentHeightAdjustableView>>(self.owner) updateHeight];
+  [nd::mvvm::RView<id<NDContentHeightAdjustableView>>(self.owner) updateHeight];
 }
 
 @end

@@ -8,8 +8,6 @@
 
 #import <NDMVVM/Abstracts/NDView.h>
 
-#import <NDMVVM/Objects/NDEvent.h>
-
 NS_ASSUME_NONNULL_BEGIN
 
 NS_SWIFT_NAME(NDContentHeightAdjustableViewProtocol)

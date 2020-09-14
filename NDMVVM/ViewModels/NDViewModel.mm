@@ -19,22 +19,6 @@ using namespace nd::objc;
 
 @synthesize view = _view;
 
-// TODO: - need confirm
-//- (void)setView:(__kindof id<NDView>)view {
-////  if (NDSameOrEquals(_view, view)) {
-////    return;
-////  }
-////
-////  if (view && ![self validateView:view]) {
-////    NDCAssertionFailure(@"Unexpected type: Set '%@' as '%@'.view.",
-///view.class, /                        self.class); /    self.view = nil; /
-///return; /  }
-////
-////  auto oldView = _view;
-////  _view = view;
-////  [self didSetViewFromOldView:oldView];
-//}
-
 - (BOOL)validateView:(__kindof id<NDView>)view {
   return YES;
 }
@@ -68,10 +52,10 @@ inline void ViewModel_View_Setter(__kindof id<NDViewModel> _Nullable viewModel,
   [viewModel didSetViewFromOldView:oldView];
 }
 
-inline void NDBlindRoute(__kindof id<NDViewModel> _Nullable viewModel,
-                         __kindof id<NDView> _Nullable view,
-                         __kindof id<NDViewModel> _Nullable viewModel1,
-                         __kindof id<NDView> _Nullable view1) {
+inline void NDBlindConnect(__kindof id<NDViewModel> _Nullable viewModel,
+                           __kindof id<NDView> _Nullable view,
+                           __kindof id<NDViewModel> _Nullable viewModel1,
+                           __kindof id<NDView> _Nullable view1) {
   View_ViewModel_Setter(viewModel.view, nil);
   ViewModel_View_Setter(view.viewModel, nil);
   ViewModel_View_Setter(viewModel, view1);
@@ -79,8 +63,8 @@ inline void NDBlindRoute(__kindof id<NDViewModel> _Nullable viewModel,
 }
 }
 
-void NDRoute(__kindof id<NDViewModel> _Nullable viewModel,
-             __kindof id<NDView> _Nullable view) {
+void NDConnect(__kindof id<NDViewModel> _Nullable viewModel,
+               __kindof id<NDView> _Nullable view) {
   auto testViews = SameOrEquals(viewModel.view, view);
   auto testViewModels = SameOrEquals(view.viewModel, viewModel);
   if (testViews && testViewModels) {
@@ -92,23 +76,23 @@ void NDRoute(__kindof id<NDViewModel> _Nullable viewModel,
   }
 
   if (!view || !viewModel) {
-    NDBlindRoute(viewModel, view, viewModel, view);
+    NDBlindConnect(viewModel, view, viewModel, view);
     return;
   }
 
   if (![viewModel validateView:view]) {
     NDCAssertionFailure(@"Unexpected type: Set '%@' as '%@'.view.", view.class,
                         viewModel.class);
-    NDBlindRoute(viewModel, view, nil, nil);
+    NDBlindConnect(viewModel, view, nil, nil);
     return;
   }
 
   if (![view validateViewModel:viewModel]) {
     NDCAssertionFailure(@"Unexpected type: Set '%@' as '%@'.viewModel.",
                         viewModel.class, view.class);
-    NDBlindRoute(viewModel, view, nil, nil);
+    NDBlindConnect(viewModel, view, nil, nil);
     return;
   }
 
-  NDBlindRoute(viewModel, view, viewModel, view);
+  NDBlindConnect(viewModel, view, viewModel, view);
 }

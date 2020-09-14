@@ -17,7 +17,7 @@ NS_SWIFT_NAME(NDViewProtocol)
 
 /**
 The view model. Don't use the setter unless you have got strong reason, use the
-NDRoute instead.
+NDConnect instead.
  */
 @property(nonatomic, strong) __kindof id<NDViewModel> _Nullable viewModel;
 - (BOOL)validateViewModel:(__kindof id<NDViewModel>)viewModel;
