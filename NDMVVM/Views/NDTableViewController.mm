@@ -26,17 +26,17 @@ using namespace nd;
 
   self.numberOfRowsInSectionHandler =
       ^NSInteger(NDTableViewController* self, NSInteger section) {
-        return ViewModel(self).numberOfItems;
+        return RViewModel(self).numberOfItems;
       };
 
   self.cellReusableIdentifierForRowAtIndexPathHandler =
       ^NSString*(NDTableViewController* self, NSIndexPath* indexPath) {
-    return [ViewModel(self) viewModelForItem:indexPath.row].identifier;
+    return [RViewModel(self) viewModelForItem:indexPath.row].identifier;
   };
   self.prepareCellForRowAtIndexPathHandler =
       ^(NDTableViewController* self, NDTableViewCell* cell,
         NSIndexPath* indexPath) {
-        NDConnect([ViewModel(self) viewModelForItem:indexPath.row], cell);
+        NDConnect([RViewModel(self) viewModelForItem:indexPath.row], cell);
       };
 }
 
@@ -56,6 +56,6 @@ using namespace nd;
 
 // MARK: - Privates
 
-NDView_ViewModel_Default_Impl(NDListViewModel);
+NDView_RViewModel_Default_Impl(NDListViewModel);
 
 @end

@@ -38,7 +38,7 @@
     if (oldHandler) {
       oldHandler(self, cell, indexPath);
     }
-    auto cellViewModel = [ViewModel(self) viewModelForItem:indexPath.row];
+    auto cellViewModel = [RViewModel(self) viewModelForItem:indexPath.row];
     if ([cellViewModel.class conformsToProtocol:@protocol(
                                                     NDAppearableViewModel)]) {
       [((id<NDAppearableViewModel>)cellViewModel).appear on];
@@ -53,6 +53,6 @@
 }
 
 // MARK: -Privates
-NDView_ViewModel_Default_Impl(NDListViewModel);
+NDView_RViewModel_Default_Impl(NDListViewModel);
 
 @end

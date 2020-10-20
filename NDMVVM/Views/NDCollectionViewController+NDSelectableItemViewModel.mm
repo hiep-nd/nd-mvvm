@@ -30,7 +30,7 @@
     if (oldHandler) {
       oldHandler(self, indexPath);
     }
-    auto cellViewModel = [ViewModel(self) viewModelForItem:indexPath.row];
+    auto cellViewModel = [RViewModel(self) viewModelForItem:indexPath.row];
     if ([cellViewModel.class conformsToProtocol:@protocol(
                                                     NDSelectableViewModel)]) {
       [((id<NDSelectableViewModel>)cellViewModel).select on];
@@ -45,6 +45,6 @@
 }
 
 // MARK: - Privates
-NDView_ViewModel_Default_Impl(NDListViewModel);
+NDView_RViewModel_Default_Impl(NDListViewModel);
 
 @end

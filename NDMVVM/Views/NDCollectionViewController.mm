@@ -26,12 +26,12 @@ using namespace nd;
 
   self.numberOfItemsInSectionHandler =
       ^NSInteger(NDCollectionViewController* self, NSInteger) {
-        return ViewModel(self).numberOfItems;
+        return RViewModel(self).numberOfItems;
       };
 
   self.cellForItemAtIndexPathHandler = ^UICollectionViewCell*(
       NDCollectionViewController* self, NSIndexPath* indexPath) {
-    auto cellViewModel = [ViewModel(self) viewModelForItem:indexPath.item];
+    auto cellViewModel = [RViewModel(self) viewModelForItem:indexPath.item];
     NDCollectionViewCell* cell = [self.collectionView
         dequeueReusableCellWithReuseIdentifier:cellViewModel.identifier
                                   forIndexPath:indexPath];
@@ -53,6 +53,6 @@ using namespace nd;
 
 // MARK: - Privates
 
-NDView_ViewModel_Default_Impl(NDListViewModel);
+NDView_RViewModel_Default_Impl(NDListViewModel);
 
 @end
