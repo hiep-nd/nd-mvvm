@@ -1,31 +1,79 @@
 PODS:
-  - NDLog (0.0.4)
-  - NDManualObjects (0.0.6):
-    - NDLog (~> 0.0.4)
+  - NDLog (0.0.5)
+  - NDManualObjects (0.0.8):
+    - NDLog (~> 0.0.5)
     - NDUtils/objc (~> 0.0.4)
-  - NDUtils/Core (0.0.4)
-  - NDUtils/objc (0.0.4):
-    - NDLog (~> 0.0.4)
+  - NDMVVM (0.0.3.2):
+    - NDMVVM/Abstracts (= 0.0.3.2)
+    - NDMVVM/Core (= 0.0.3.2)
+    - NDMVVM/Privates (= 0.0.3.2)
+    - NDMVVM/ViewModels (= 0.0.3.2)
+    - NDMVVM/ViewModels_Privates (= 0.0.3.2)
+    - NDMVVM/Views (= 0.0.3.2)
+  - NDMVVM/Abstracts (0.0.3.2):
+    - NDMVVM/Core
+    - NDUtils/objc (~> 0.0.4)
+  - NDMVVM/Core (0.0.3.2)
+  - NDMVVM/Privates (0.0.3.2):
+    - NDMVVM/Abstracts
+    - NDUtils/objc (~> 0.0.4)
+  - NDMVVM/ViewModels (0.0.3.2):
+    - NDLog (~> 0.0.5)
+    - NDMVVM/Abstracts
+    - NDMVVM/Privates
+    - NDMVVM/ViewModels_Privates
+    - NDUtils/objc (~> 0.0.4)
+  - NDMVVM/ViewModels_Privates (0.0.3.2):
+    - NDLog (~> 0.0.5)
+  - NDMVVM/Views (0.0.3.2):
+    - NDLog (~> 0.0.5)
+    - NDManualObjects (~> 0.0.7)
+    - NDMVVM/Abstracts
+    - NDMVVM/Privates
+    - NDUtils/objc (~> 0.0.4)
+  - NDUtils (0.0.4.4):
+    - NDUtils/Core (= 0.0.4.4)
+    - NDUtils/Foundation (= 0.0.4.4)
+    - NDUtils/libextobjc (= 0.0.4.4)
+    - NDUtils/objc (= 0.0.4.4)
+    - NDUtils/QuartzCore (= 0.0.4.4)
+    - NDUtils/UIKit (= 0.0.4.4)
+  - NDUtils/Core (0.0.4.4)
+  - NDUtils/Foundation (0.0.4.4):
+    - NDLog (~> 0.0.5)
     - NDUtils/Core
+  - NDUtils/libextobjc (0.0.4.4):
+    - NDUtils/Core
+  - NDUtils/objc (0.0.4.4):
+    - NDLog (~> 0.0.5)
+    - NDUtils/Core
+  - NDUtils/QuartzCore (0.0.4.4):
+    - NDUtils/objc
+  - NDUtils/UIKit (0.0.4.4):
+    - NDUtils/QuartzCore
 
 DEPENDENCIES:
   - NDLog (from `../NDLog`)
   - NDManualObjects (from `../NDManualObjects`)
-  - NDUtils/Core (from `../NDUtils`)
+  - NDMVVM (from `.`)
+  - NDUtils (from `../NDUtils`)
 
 EXTERNAL SOURCES:
   NDLog:
     :path: "../NDLog"
   NDManualObjects:
     :path: "../NDManualObjects"
+  NDMVVM:
+    :path: "."
   NDUtils:
     :path: "../NDUtils"
 
 SPEC CHECKSUMS:
-  NDLog: f84c4c42520a954db34fa487d88a9bcc2ee0100b
-  NDManualObjects: 842989e8f663d6962bf5e9bccaf720a610c9b832
-  NDUtils: 8d6c354d40db38eb568ca42c4b6e02e3d03f6449
+  NDLog: 2d478a5bc74f17ee56fea08adb6dacdaa36a07e6
+  NDManualObjects: 32facdebe7995fbaa5a6096bb20c6791ee9155d4
+  NDMVVM: 74419146cdbe3d4ce0809abe55a972ac680b2a19
+  NDUtils: 36e0437d499184c6029e8e4b5b3bc4589072c607
 
-PODFILE CHECKSUM: 56aa3e193abe2eebf8c548f9c603c1aca110bc90
+PODFILE CHECKSUM: d71a73b29c0cddca1de4f570f2c8d45598235933
 
 COCOAPODS: 1.9.3

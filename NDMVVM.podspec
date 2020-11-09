@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "NDMVVM"
-  s.version      = "0.0.3.1"
+  s.version      = "0.0.3.2"
   s.summary      = "Support MVVM pattern."
   s.description  = <<-DESC
   NDMVVM is a small framework that support MVVM pattern.
@@ -14,17 +14,50 @@ Pod::Spec.new do |s|
   s.requires_arc   = true
   #s.source        = { :http => 'file:' + URI.escape(__dir__) + '/' }
   s.source       = { :git => "https://github.com/hiep-nd/nd-mvvm.git", :tag => "Pod-#{s.version}" }
-  s.source_files  = "NDMVVM/**/*.{h,m,mm}"
-  # TODO: - need updated
-  #s.public_header_files = "NDMVVM/NDMVVM.h", "NDMVVM/{Abstracts,ViewModels,Views}/*.h"
-  #s.public_header_files = "NDMVVM/*.h", "NDMVVM/[^P]*/**/*.h", "NDMVVM/*/[^P]*/**/*.h"
-  s.public_header_files = "NDMVVM/**/*.h"
-  s.private_header_files = "NDMVVM/**/Privates/**/*.h"
-  s.header_mappings_dir = 'NDMVVM'
-  s.framework = 'Foundation', 'UIKit'
-  s.module_map = 'NDMVVM/NDMVVM.modulemap'
-  
-  s.dependency 'NDLog', '~> 0.0.5'
-  s.dependency 'NDManualObjects', '~> 0.0.7'
-  s.dependency 'NDUtils/objc', '~> 0.0.4'
+
+  s.subspec 'Core' do |ss|
+    ss.source_files = "Sources/Core/*.{h,m,mm,swift}"
+  end
+
+  s.subspec 'Abstracts' do |ss|
+    ss.source_files = "Sources/Abstracts/*.{h,m,mm,swift}"
+    ss.framework = 'Foundation'
+    ss.dependency 'NDMVVM/Core'
+    ss.dependency 'NDUtils/objc', '~> 0.0.4'
+  end
+
+  s.subspec 'Privates' do |ss|
+    ss.source_files = "Sources/Privates/*.{h,m,mm,swift}"
+    ss.private_header_files = "Sources/Privates/*.h"
+    ss.framework = 'Foundation'
+    ss.dependency 'NDMVVM/Abstracts'
+    ss.dependency 'NDUtils/objc', '~> 0.0.4'
+  end
+
+  s.subspec 'ViewModels' do |ss|
+    ss.source_files = "Sources/ViewModels/*.{h,m,mm,swift}"
+    ss.framework = 'Foundation'
+    ss.dependency 'NDMVVM/Abstracts'
+    ss.dependency 'NDMVVM/Privates'
+    ss.dependency 'NDMVVM/ViewModels_Privates'
+    ss.dependency 'NDLog', '~> 0.0.5'
+    ss.dependency 'NDUtils/objc', '~> 0.0.4'
+  end
+
+  s.subspec 'ViewModels_Privates' do |ss|
+    ss.source_files = "Sources/ViewModels/Privates/*.{h,m,mm,swift}"
+    ss.private_header_files = "Sources/ViewModels/Privates/*.h"
+    ss.framework = 'Foundation'
+    ss.dependency 'NDLog', '~> 0.0.5'
+  end
+
+  s.subspec 'Views' do |ss|
+    ss.source_files = "Sources/Views/*.{h,m,mm,swift}"
+    ss.framework = 'Foundation', 'UIKit'
+    ss.dependency 'NDMVVM/Abstracts'
+    ss.dependency 'NDMVVM/Privates'
+    ss.dependency 'NDLog', '~> 0.0.5'
+    ss.dependency 'NDManualObjects', '~> 0.0.7'
+    ss.dependency 'NDUtils/objc', '~> 0.0.4'
+  end
 end

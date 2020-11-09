@@ -1,6 +1,6 @@
 {
   "name": "NDLog",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "summary": "A log system.",
   "description": "NDLog is a small and lightweight framework that help log.",
   "homepage": "https://github.com/hiep-nd/nd-log.git",
@@ -22,7 +22,7 @@
   ],
   "source": {
     "git": "https://github.com/hiep-nd/nd-log.git",
-    "tag": "Pod-0.0.4"
+    "tag": "Pod-0.0.5"
   },
   "source_files": "NDLog/**/*.{h,m,mm}",
   "public_header_files": "NDLog/**/*.h",
