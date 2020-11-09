@@ -12,7 +12,7 @@
 #import <NDMVVM/Abstracts_NDListViewModel.h>
 #import <NDMVVM/Abstracts_NDSelectableViewModel.h>
 
-#import <NDMVVM/Privates_NDViewDefaultImpl.h>
+#import <NDMVVM/Abstracts_Privates_NDViewDefaultImpl.h>
 
 @implementation NDTableViewController (NDSelectableItemViewModel)
 

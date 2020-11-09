@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "NDMVVM"
-  s.version      = "0.0.3.2"
+  s.version      = "0.0.4"
   s.summary      = "Support MVVM pattern."
   s.description  = <<-DESC
   NDMVVM is a small framework that support MVVM pattern.
@@ -20,44 +20,43 @@ Pod::Spec.new do |s|
   end
 
   s.subspec 'Abstracts' do |ss|
-    ss.source_files = "Sources/Abstracts/*.{h,m,mm,swift}"
+    ss.source_files = "Sources/Abstracts/*.{h,m,mm,swift}", "Sources/Abstracts/Privates/*.{h,m,mm,swift}"
+    ss.private_header_files = "Sources/Abstracts/Privates/*.h"
     ss.framework = 'Foundation'
     ss.dependency 'NDMVVM/Core'
+#    ss.dependency 'NDMVVM/Privates'
     ss.dependency 'NDUtils/objc', '~> 0.0.4'
   end
 
-  s.subspec 'Privates' do |ss|
-    ss.source_files = "Sources/Privates/*.{h,m,mm,swift}"
-    ss.private_header_files = "Sources/Privates/*.h"
-    ss.framework = 'Foundation'
+  s.subspec 'Abstracts_Swift' do |ss|
+    ss.source_files = "Sources/Abstracts_Swift/*.{h,m,mm,swift}"
     ss.dependency 'NDMVVM/Abstracts'
-    ss.dependency 'NDUtils/objc', '~> 0.0.4'
   end
 
   s.subspec 'ViewModels' do |ss|
-    ss.source_files = "Sources/ViewModels/*.{h,m,mm,swift}"
-    ss.framework = 'Foundation'
-    ss.dependency 'NDMVVM/Abstracts'
-    ss.dependency 'NDMVVM/Privates'
-    ss.dependency 'NDMVVM/ViewModels_Privates'
-    ss.dependency 'NDLog', '~> 0.0.5'
-    ss.dependency 'NDUtils/objc', '~> 0.0.4'
-  end
-
-  s.subspec 'ViewModels_Privates' do |ss|
-    ss.source_files = "Sources/ViewModels/Privates/*.{h,m,mm,swift}"
+    ss.source_files = "Sources/ViewModels/*.{h,m,mm,swift}", "Sources/ViewModels/Privates/*.{h,m,mm,swift}"
     ss.private_header_files = "Sources/ViewModels/Privates/*.h"
     ss.framework = 'Foundation'
+    ss.dependency 'NDMVVM/Abstracts'
     ss.dependency 'NDLog', '~> 0.0.5'
+    ss.dependency 'NDUtils/objc', '~> 0.0.4'
   end
 
   s.subspec 'Views' do |ss|
     ss.source_files = "Sources/Views/*.{h,m,mm,swift}"
     ss.framework = 'Foundation', 'UIKit'
     ss.dependency 'NDMVVM/Abstracts'
-    ss.dependency 'NDMVVM/Privates'
     ss.dependency 'NDLog', '~> 0.0.5'
     ss.dependency 'NDManualObjects', '~> 0.0.7'
     ss.dependency 'NDUtils/objc', '~> 0.0.4'
+  end
+
+  s.default_subspec = 'Core', 'Abstracts',  'ViewModels', 'Views'
+
+  s.subspec 'Swift' do |ss|
+    ss.dependency 'NDMVVM/Core'
+    ss.dependency 'NDMVVM/Abstracts_Swift'
+    ss.dependency 'NDMVVM/ViewModels'
+    ss.dependency 'NDMVVM/Views'
   end
 end

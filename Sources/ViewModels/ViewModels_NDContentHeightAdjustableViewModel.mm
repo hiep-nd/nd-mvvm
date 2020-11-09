@@ -8,7 +8,7 @@
 
 #import <NDMVVM/ViewModels_NDContentHeightAdjustableViewModel.h>
 
-#import <NDMVVM/Privates_NDContentHeightAdjustableViewModelDefaultImpl.h>
+#import <NDMVVM/ViewModels_Privates_NDContentHeightAdjustableViewModelDefaultImpl.h>
 
 @implementation NDContentHeightAdjustableViewModel
 

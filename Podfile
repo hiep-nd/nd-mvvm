@@ -6,7 +6,7 @@ target 'Samples' do
   use_frameworks!
 
   # Pods for Samples
-  pod 'NDMVVM', :path => '.'
+  pod 'NDMVVM/Swift', :path => '.'
   pod "NDLog", :path => '../NDLog'
   pod "NDManualObjects", :path => '../NDManualObjects'
   pod "NDUtils", :path => '../NDUtils'

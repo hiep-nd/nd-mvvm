@@ -8,7 +8,7 @@
 
 #import <NDMVVM/Views_NDContentHeightAdjustableTableViewCell.h>
 
-#import <NDMVVM/Privates_NDContentHeightAdjustableViewDefaultImpl.h>
+#import <NDMVVM/Abstracts_Privates_NDContentHeightAdjustableViewDefaultImpl.h>
 
 @implementation NDContentHeightAdjustableTableViewCell
 

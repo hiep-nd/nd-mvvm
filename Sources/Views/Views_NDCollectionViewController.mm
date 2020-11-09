@@ -14,7 +14,7 @@
 
 #import <NDLog/NDLog.h>
 
-#import <NDMVVM/Privates_NDViewDefaultImpl.h>
+#import <NDMVVM/Abstracts_Privates_NDViewDefaultImpl.h>
 
 using namespace nd;
 

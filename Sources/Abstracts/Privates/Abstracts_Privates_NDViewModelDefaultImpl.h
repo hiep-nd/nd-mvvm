@@ -1,5 +1,5 @@
 //
-//  Privates_NDViewModelDefaultImpl.h
+//  Abstracts_Privates_NDViewModelDefaultImpl.h
 //  NDMVVM
 //
 //  Created by Nguyen Duc Hiep on 7/9/20.

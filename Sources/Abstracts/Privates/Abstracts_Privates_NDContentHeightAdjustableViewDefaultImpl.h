@@ -1,5 +1,5 @@
 //
-//  Privates_NDContentHeightAdjustableViewDefaultImpl.h
+//  Abstracts_Privates_NDContentHeightAdjustableViewDefaultImpl.h
 //  NDMVVM
 //
 //  Created by Nguyen Duc Hiep on 7/10/20.
@@ -9,7 +9,7 @@
 #import <NDMVVM/Abstracts_NDContentHeightAdjustableView.h>
 #import <NDMVVM/Abstracts_NDContentHeightAdjustableViewModel.h>
 
-#import <NDMVVM/Privates_NDViewModelDefaultImpl.h>
+#import <NDMVVM/Abstracts_Privates_NDViewModelDefaultImpl.h>
 
 NS_ASSUME_NONNULL_BEGIN
 

@@ -23,12 +23,12 @@ FOUNDATION_EXPORT const unsigned char NDMVVMVersionString[];
 #import <NDMVVM/Abstracts.h>
 #endif
 
-#if __has_include(<NDMVVM/ViewModels.h>)
-#import <NDMVVM/ViewModels.h>
-#endif
-
-#if __has_include(<NDMVVM/Views.h>)
-#import <NDMVVM/Views.h>
-#endif
+//#if __has_include(<NDMVVM/ViewModels.h>)
+//#import <NDMVVM/ViewModels.h>
+//#endif
+//
+//#if __has_include(<NDMVVM/Views.h>)
+//#import <NDMVVM/Views.h>
+//#endif
 
 #endif

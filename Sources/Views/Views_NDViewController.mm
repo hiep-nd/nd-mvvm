@@ -8,7 +8,7 @@
 
 #import <NDMVVM/Views_NDViewController.h>
 
-#import <NDMVVM/Privates_NDViewDefaultImpl.h>
+#import <NDMVVM/Abstracts_Privates_NDViewDefaultImpl.h>
 
 @implementation NDViewController
 

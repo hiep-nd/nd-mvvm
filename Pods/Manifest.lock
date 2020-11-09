@@ -6,30 +6,27 @@ PODS:
   - NDMVVM (0.0.3.2):
     - NDMVVM/Abstracts (= 0.0.3.2)
     - NDMVVM/Core (= 0.0.3.2)
-    - NDMVVM/Privates (= 0.0.3.2)
     - NDMVVM/ViewModels (= 0.0.3.2)
-    - NDMVVM/ViewModels_Privates (= 0.0.3.2)
     - NDMVVM/Views (= 0.0.3.2)
   - NDMVVM/Abstracts (0.0.3.2):
     - NDMVVM/Core
     - NDUtils/objc (~> 0.0.4)
-  - NDMVVM/Core (0.0.3.2)
-  - NDMVVM/Privates (0.0.3.2):
+  - NDMVVM/Abstracts_Swift (0.0.3.2):
     - NDMVVM/Abstracts
-    - NDUtils/objc (~> 0.0.4)
+  - NDMVVM/Core (0.0.3.2)
+  - NDMVVM/Swift (0.0.3.2):
+    - NDMVVM/Abstracts_Swift
+    - NDMVVM/Core
+    - NDMVVM/ViewModels
+    - NDMVVM/Views
   - NDMVVM/ViewModels (0.0.3.2):
     - NDLog (~> 0.0.5)
     - NDMVVM/Abstracts
-    - NDMVVM/Privates
-    - NDMVVM/ViewModels_Privates
     - NDUtils/objc (~> 0.0.4)
-  - NDMVVM/ViewModels_Privates (0.0.3.2):
-    - NDLog (~> 0.0.5)
   - NDMVVM/Views (0.0.3.2):
     - NDLog (~> 0.0.5)
     - NDManualObjects (~> 0.0.7)
     - NDMVVM/Abstracts
-    - NDMVVM/Privates
     - NDUtils/objc (~> 0.0.4)
   - NDUtils (0.0.4.4):
     - NDUtils/Core (= 0.0.4.4)
@@ -56,6 +53,7 @@ DEPENDENCIES:
   - NDLog (from `../NDLog`)
   - NDManualObjects (from `../NDManualObjects`)
   - NDMVVM (from `.`)
+  - NDMVVM/Swift (from `.`)
   - NDUtils (from `../NDUtils`)
 
 EXTERNAL SOURCES:
@@ -71,9 +69,9 @@ EXTERNAL SOURCES:
 SPEC CHECKSUMS:
   NDLog: 2d478a5bc74f17ee56fea08adb6dacdaa36a07e6
   NDManualObjects: 32facdebe7995fbaa5a6096bb20c6791ee9155d4
-  NDMVVM: 74419146cdbe3d4ce0809abe55a972ac680b2a19
+  NDMVVM: b68fb9a2303b2d8c308cf915ddb8336fa44ce637
   NDUtils: 36e0437d499184c6029e8e4b5b3bc4589072c607
 
-PODFILE CHECKSUM: d71a73b29c0cddca1de4f570f2c8d45598235933
+PODFILE CHECKSUM: 97b108c404553d692f94d5277c31eb990c328d20
 
 COCOAPODS: 1.9.3
