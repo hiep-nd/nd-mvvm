@@ -6,20 +6,19 @@ target 'Samples' do
   use_frameworks!
 
   # Pods for Samples
-  pod 'NDMVVM/Swift', :path => '.'
-  pod "NDLog", :path => '../NDLog'
-  pod "NDManualObjects", :path => '../NDManualObjects'
-  pod "NDUtils", :path => '../NDUtils'
+  pod 'NDMVVM', :path => '.'
+  
+#  pod "NDLog/ObjC", :path => '../NDLog'
+#  pod "NDManualObjects/ObjC", :path => '../NDManualObjects'
+#  pod "NDUtils/ObjC", :path => '../NDUtils'
 
   target 'SamplesTests' do
     inherit! :search_paths
     # Pods for testing
-    pod 'NDMVVM', :path => '.'
   end
 
   target 'SamplesUITests' do
     # Pods for testing
-    pod 'NDMVVM', :path => '.'
   end
 
 end

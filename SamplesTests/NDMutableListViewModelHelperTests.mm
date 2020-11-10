@@ -8,7 +8,7 @@
 
 #import <XCTest/XCTest.h>
 
-#import <NDMVVM/ViewModels/Privates/NDMutableListViewModelHelper.h>
+#import <NDMVVM/ViewModels_Privates_NDMutableListViewModelHelper.h>
 
 #import <map>
 #import <string>

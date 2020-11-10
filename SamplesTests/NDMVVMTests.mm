@@ -9,6 +9,7 @@
 #import <XCTest/XCTest.h>
 
 #import <NDMVVM/NDMVVM.h>
+#import <NDManualObjects/NDManualObjects.h>
 
 @interface NDMVVMTests : XCTestCase
 

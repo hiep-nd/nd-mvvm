@@ -24,8 +24,8 @@ Pod::Spec.new do |s|
     ss.private_header_files = "Sources/Abstracts/Privates/*.h"
     ss.framework = 'Foundation'
     ss.dependency 'NDMVVM/Core'
-#    ss.dependency 'NDMVVM/Privates'
-    ss.dependency 'NDUtils/objc', '~> 0.0.4'
+    ss.dependency 'NDLog/ObjC', '~> 0.0.6'
+    ss.dependency 'NDUtils/objc', '~> 0.0.5'
   end
 
   s.subspec 'Abstracts_Swift' do |ss|
@@ -38,25 +38,30 @@ Pod::Spec.new do |s|
     ss.private_header_files = "Sources/ViewModels/Privates/*.h"
     ss.framework = 'Foundation'
     ss.dependency 'NDMVVM/Abstracts'
-    ss.dependency 'NDLog', '~> 0.0.5'
-    ss.dependency 'NDUtils/objc', '~> 0.0.4'
+    ss.dependency 'NDLog/ObjC', '~> 0.0.6'
+    ss.dependency 'NDUtils/objc', '~> 0.0.5'
   end
 
   s.subspec 'Views' do |ss|
     ss.source_files = "Sources/Views/*.{h,m,mm,swift}"
     ss.framework = 'Foundation', 'UIKit'
     ss.dependency 'NDMVVM/Abstracts'
-    ss.dependency 'NDLog', '~> 0.0.5'
-    ss.dependency 'NDManualObjects', '~> 0.0.7'
-    ss.dependency 'NDUtils/objc', '~> 0.0.4'
+    ss.dependency 'NDLog/ObjC', '~> 0.0.6'
+    ss.dependency 'NDManualObjects/ObjC', '~> 0.0.8'
+    ss.dependency 'NDUtils/objc', '~> 0.0.5'
   end
 
-  s.default_subspec = 'Core', 'Abstracts',  'ViewModels', 'Views'
-
-  s.subspec 'Swift' do |ss|
+  s.subspec 'ObjC' do |ss|
     ss.dependency 'NDMVVM/Core'
-    ss.dependency 'NDMVVM/Abstracts_Swift'
+    ss.dependency 'NDMVVM/Abstracts'
     ss.dependency 'NDMVVM/ViewModels'
     ss.dependency 'NDMVVM/Views'
   end
+
+  s.subspec 'Swift' do |ss|
+    ss.dependency 'NDMVVM/Abstracts_Swift'
+    ss.dependency 'NDMVVM/ObjC'
+  end
+
+  s.default_subspec = 'Swift'
 end
