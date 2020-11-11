@@ -29,6 +29,9 @@ NSMutableArray<NSIndexPath*>* ToIndexPaths(NSArray<NSNumber*>* items) {
 // MARK: - NDMutableListView
 
 - (void)reloadAll {
+  if (!self.isViewLoaded) {
+    return;
+  }
   [self.tableView reloadSections:[NSIndexSet indexSetWithIndex:0]
                 withRowAnimation:UITableViewRowAnimationAutomatic];
 }
@@ -36,6 +39,10 @@ NSMutableArray<NSIndexPath*>* ToIndexPaths(NSArray<NSNumber*>* items) {
 - (void)deleteItems:(NSArray<NSNumber*>*)deletedItems
         updateItems:(NSArray<NSNumber*>*)updatedItems
         insertItems:(NSArray<NSNumber*>*)insertedItems {
+  if (!self.isViewLoaded) {
+    return;
+  }
+
   if (deletedItems.count == 0 && updatedItems.count == 0 &&
       insertedItems.count == 0) {
     return;
@@ -60,15 +67,6 @@ NSMutableArray<NSIndexPath*>* ToIndexPaths(NSArray<NSNumber*>* items) {
   };
 
   [self performBatchUpdates:update];
-  //  if (@available(iOS 11, tvOS 11, *)) {
-  //    [self.tableView performBatchUpdates:update completion:nil];
-  //  } else {
-  //    if (update) {
-  //      [self.tableView beginUpdates];
-  //      update();
-  //      [self.tableView endUpdates];
-  //    }
-  //  }
 }
 
 - (BOOL)validateViewModel:(__kindof id<NDViewModel>)viewModel {

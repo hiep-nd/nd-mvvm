@@ -43,15 +43,19 @@ using namespace nd;
 // MARK: - NDListView
 @synthesize viewModel = _viewModel;
 
-// TODO: - need confirm
-// NDView_ViewModel_Setter_Default_Impl;
-
 - (BOOL)validateViewModel:(__kindof id<NDViewModel>)viewModel {
   return [viewModel conformsToProtocol:@protocol(NDListViewModel)];
 }
 
 - (void)didSetViewModelFromOldViewModel:(__kindof id<NDViewModel>)oldViewModel {
-  [self.tableView reloadData];
+  if (@available(iOS 14, tvOS 14, *)) {
+    [self performBatchUpdates:^{
+      [self.tableView reloadSections:[NSIndexSet indexSetWithIndex:0]
+                    withRowAnimation:UITableViewRowAnimationNone];
+    }];
+  } else {
+    [self.tableView reloadData];
+  }
 }
 
 // MARK: - Privates
