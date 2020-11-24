@@ -1,78 +1,99 @@
 PODS:
-  - NDLog (0.0.6.1):
-    - NDLog/Swift (= 0.0.6.1)
-  - NDLog/Core (0.0.6.1)
-  - NDLog/ObjC (0.0.6.1):
-    - NDLog/Core
-  - NDLog/Swift (0.0.6.1):
-    - NDLog/Core
-  - NDManualObjects/Abstracts (0.0.8):
-    - NDLog (~> 0.0.6)
-    - NDManualObjects/Core
-    - NDUtils/objc (~> 0.0.5)
-  - NDManualObjects/Core (0.0.8):
-    - NDLog (~> 0.0.6)
-    - NDUtils/objc (~> 0.0.5)
-  - NDManualObjects/ObjC (0.0.8):
-    - NDLog (~> 0.0.6)
-    - NDManualObjects/Abstracts
-    - NDManualObjects/Core
-    - NDManualObjects/Objects
-    - NDUtils/objc (~> 0.0.5)
-  - NDManualObjects/Objects (0.0.8):
-    - NDLog (~> 0.0.6)
-    - NDManualObjects/Abstracts
-    - NDUtils/objc (~> 0.0.5)
-  - NDMVVM (0.0.4):
-    - NDMVVM/Swift (= 0.0.4)
-  - NDMVVM/Abstracts (0.0.4):
+  - NDLog/Core_ObjC (0.0.6.3)
+  - NDLog/ObjC (0.0.6.3):
+    - NDLog/Core_ObjC
+  - NDManualObjects/Abstracts_ObjC (0.0.8.2):
     - NDLog/ObjC (~> 0.0.6)
-    - NDMVVM/Core
-    - NDUtils/objc (~> 0.0.5)
-  - NDMVVM/Abstracts_Swift (0.0.4):
-    - NDMVVM/Abstracts
-  - NDMVVM/Core (0.0.4)
-  - NDMVVM/ObjC (0.0.4):
-    - NDMVVM/Abstracts
-    - NDMVVM/Core
-    - NDMVVM/ViewModels
-    - NDMVVM/Views
-  - NDMVVM/Swift (0.0.4):
+    - NDManualObjects/Core_ObjC
+    - NDUtils/objc_ObjC (~> 0.0.5)
+  - NDManualObjects/Core_ObjC (0.0.8.2):
+    - NDLog/ObjC (~> 0.0.6)
+    - NDUtils/objc_ObjC (~> 0.0.5)
+  - NDManualObjects/ObjC (0.0.8.2):
+    - NDLog/ObjC (~> 0.0.6)
+    - NDManualObjects/Abstracts_ObjC
+    - NDManualObjects/Core_ObjC
+    - NDManualObjects/Objects_ObjC
+    - NDUtils/objc_ObjC (~> 0.0.5)
+  - NDManualObjects/Objects_ObjC (0.0.8.2):
+    - NDLog/ObjC (~> 0.0.6)
+    - NDManualObjects/Abstracts_ObjC
+    - NDUtils/objc_ObjC (~> 0.0.5)
+  - NDMVVM (0.0.4.2):
+    - NDMVVM/Swift (= 0.0.4.2)
+  - NDMVVM/Abstracts_ObjC (0.0.4.2):
+    - NDLog/ObjC (~> 0.0.6)
+    - NDMVVM/Core_ObjC
+    - NDUtils/objc_ObjC (~> 0.0.5)
+  - NDMVVM/Abstracts_Swift (0.0.4.2):
+    - NDMVVM/Abstracts_ObjC
+  - NDMVVM/Core_ObjC (0.0.4.2)
+  - NDMVVM/Core_Swift (0.0.4.2):
+    - NDMVVM/Core_ObjC
+  - NDMVVM/Swift (0.0.4.2):
     - NDMVVM/Abstracts_Swift
-    - NDMVVM/ObjC
-  - NDMVVM/ViewModels (0.0.4):
+    - NDMVVM/Core_Swift
+    - NDMVVM/ViewModels_Swift
+    - NDMVVM/Views_Swift
+  - NDMVVM/ViewModels_ObjC (0.0.4.2):
     - NDLog/ObjC (~> 0.0.6)
-    - NDMVVM/Abstracts
-    - NDUtils/objc (~> 0.0.5)
-  - NDMVVM/Views (0.0.4):
+    - NDMVVM/Abstracts_ObjC
+    - NDUtils/objc_ObjC (~> 0.0.5)
+  - NDMVVM/ViewModels_Swift (0.0.4.2):
+    - NDMVVM/ViewModels_ObjC
+  - NDMVVM/Views_ObjC (0.0.4.2):
     - NDLog/ObjC (~> 0.0.6)
     - NDManualObjects/ObjC (~> 0.0.8)
-    - NDMVVM/Abstracts
-    - NDUtils/objc (~> 0.0.5)
-  - NDUtils/Core (0.0.5)
-  - NDUtils/objc (0.0.5):
-    - NDLog (~> 0.0.6)
-    - NDUtils/Core
+    - NDMVVM/Abstracts_ObjC
+    - NDUtils/objc_ObjC (~> 0.0.5)
+  - NDMVVM/Views_Swift (0.0.4.2):
+    - NDMVVM/Views_ObjC
+    - NDUtils/UIKit_Swift (~> 0.0.5)
+  - NDUtils/Core_ObjC (0.0.5.1)
+  - NDUtils/Foundation_ObjC (0.0.5.1):
+    - NDLog/ObjC (~> 0.0.6)
+    - NDUtils/objc_ObjC
+  - NDUtils/libextobjc_ObjC (0.0.5.1):
+    - NDUtils/Core_ObjC
+  - NDUtils/ObjC (0.0.5.1):
+    - NDUtils/Core_ObjC
+    - NDUtils/Foundation_ObjC
+    - NDUtils/libextobjc_ObjC
+    - NDUtils/objc_ObjC
+    - NDUtils/QuartzCore_ObjC
+    - NDUtils/UIKit_ObjC
+  - NDUtils/objc_ObjC (0.0.5.1):
+    - NDLog/ObjC (~> 0.0.6)
+    - NDUtils/Core_ObjC
+  - NDUtils/QuartzCore_ObjC (0.0.5.1):
+    - NDUtils/objc_ObjC
+  - NDUtils/UIKit_ObjC (0.0.5.1):
+    - NDUtils/QuartzCore_ObjC
+  - NDUtils/UIKit_Swift (0.0.5.1):
+    - NDUtils/UIKit_ObjC
 
 DEPENDENCIES:
+  - NDLog/ObjC (from `../NDLog`)
+  - NDManualObjects/ObjC (from `../NDManualObjects`)
   - NDMVVM (from `.`)
-
-SPEC REPOS:
-  trunk:
-    - NDLog
-    - NDManualObjects
-    - NDUtils
+  - NDUtils/ObjC (from `../NDUtils`)
 
 EXTERNAL SOURCES:
+  NDLog:
+    :path: "../NDLog"
+  NDManualObjects:
+    :path: "../NDManualObjects"
   NDMVVM:
     :path: "."
+  NDUtils:
+    :path: "../NDUtils"
 
 SPEC CHECKSUMS:
-  NDLog: 1e996efb979679f547dcf729a955fe92577ed2c5
-  NDManualObjects: 238cf28c9a73c20552d3ed721da8b1a12f7e097f
-  NDMVVM: 679ea49e940e6b39490e510d8ab4a491a8bf9899
-  NDUtils: 1a72e3cfd4f1510b261999c0f26f17648c033ac9
+  NDLog: 783141ece6ac6a398262145b59cc7c27b80ab58d
+  NDManualObjects: 352b918cd30731fabb7649cb6384b0e2c7a6d9c1
+  NDMVVM: 114474b7653103f4f017c8c068d06f4967ba1916
+  NDUtils: aa4bbf2c741cf5d9b53276beb0cff3b7a365b7b2
 
-PODFILE CHECKSUM: 3030df34bd4a03cb52d8dee286a97ba244eb6599
+PODFILE CHECKSUM: 0aa4bbbff8598bf97d14d45d74bdebd30ef4f48a
 
 COCOAPODS: 1.9.3

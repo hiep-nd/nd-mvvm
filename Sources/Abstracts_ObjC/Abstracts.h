@@ -8,6 +8,7 @@
 #import <NDMVVM/Abstracts_NDAppearableViewModel.h>
 #import <NDMVVM/Abstracts_NDContentHeightAdjustableView.h>
 #import <NDMVVM/Abstracts_NDContentHeightAdjustableViewModel.h>
+#import <NDMVVM/Abstracts_NDErrorHandleableView.h>
 #import <NDMVVM/Abstracts_NDItemViewModel.h>
 #import <NDMVVM/Abstracts_NDListView.h>
 #import <NDMVVM/Abstracts_NDListViewModel.h>

@@ -8,13 +8,13 @@
 import NDMVVM
 
 class ViewController: UIViewController {
-  var listViewController: NDMutableTableViewController!
+  var listViewController: NDMutableTableViewController?
   let listViewModel = NDMutableListViewModel(itemViewModels: [])
 
   override func viewDidLoad() {
     super.viewDidLoad()
 
-    listViewController.register(identifier: "item", class: NDTableViewCell.self)
+    listViewController?.register(identifier: "item", class: NDTableViewCell.self)
     nd_connect(viewModel: listViewModel, view: listViewController)
   }
 
@@ -32,7 +32,7 @@ class ViewController: UIViewController {
         item += 1
       }
     }
- }
+  }
 
   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
     if segue.identifier == "list" {

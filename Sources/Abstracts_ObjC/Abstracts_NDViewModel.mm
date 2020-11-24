@@ -56,7 +56,7 @@ void NDConnect(__kindof id<NDViewModel> _Nullable viewModel,
   if (testViews && testViewModels) {
     return;
   }
-  if (testViews != testViewModels) {
+  if (view && viewModel && (testViews != testViewModels)) {
     NDCAssertionFailure(@"Detect invalid route between '%@' and '%@'.",
                         viewModel, view);
   }

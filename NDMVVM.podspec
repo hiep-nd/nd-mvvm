@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "NDMVVM"
-  s.version      = "0.0.4.1"
+  s.version      = "0.0.4.2"
   s.summary      = "Support MVVM pattern."
   s.description  = <<-DESC
   NDMVVM is a small framework that support MVVM pattern.
@@ -15,52 +15,84 @@ Pod::Spec.new do |s|
   #s.source        = { :http => 'file:' + URI.escape(__dir__) + '/' }
   s.source       = { :git => "https://github.com/hiep-nd/nd-mvvm.git", :tag => "Pod-#{s.version}" }
 
-  s.subspec 'Core' do |ss|
-    ss.source_files = "Sources/Core/*.{h,m,mm,swift}"
+  s.subspec 'Core_ObjC' do |ss|
+    ss.source_files = "Sources/Core_ObjC/*.{h,m,mm,swift}"
   end
 
-  s.subspec 'Abstracts' do |ss|
-    ss.source_files = "Sources/Abstracts/*.{h,m,mm,swift}", "Sources/Abstracts/Privates/*.{h,m,mm,swift}"
-    ss.private_header_files = "Sources/Abstracts/Privates/*.h"
+  s.subspec 'Core_Swift' do |ss|
+    ss.dependency 'NDMVVM/Core_ObjC'
+  end
+
+  s.subspec 'Core' do |ss|
+    ss.dependency 'NDMVVM/Core_Swift'
+  end
+
+  s.subspec 'Abstracts_ObjC' do |ss|
+    ss.source_files = "Sources/Abstracts_ObjC/*.{h,m,mm,swift}", "Sources/Abstracts_ObjC/Privates/*.{h,m,mm,swift}"
+    ss.private_header_files = "Sources/Abstracts_ObjC/Privates/*.h"
     ss.framework = 'Foundation'
-    ss.dependency 'NDMVVM/Core'
+    ss.dependency 'NDMVVM/Core_ObjC'
     ss.dependency 'NDLog/ObjC', '~> 0.0.6'
-    ss.dependency 'NDUtils/objc', '~> 0.0.5'
+    ss.dependency 'NDUtils/objc_ObjC', '~> 0.0.5'
   end
 
   s.subspec 'Abstracts_Swift' do |ss|
     ss.source_files = "Sources/Abstracts_Swift/*.{h,m,mm,swift}"
-    ss.dependency 'NDMVVM/Abstracts'
+    ss.dependency 'NDMVVM/Abstracts_ObjC'
+  end
+
+  s.subspec 'Abstracts' do |ss|
+    ss.dependency 'NDMVVM/Abstracts_Swift'
+  end
+
+  s.subspec 'ViewModels_ObjC' do |ss|
+    ss.source_files = "Sources/ViewModels_ObjC/*.{h,m,mm,swift}", "Sources/ViewModels_ObjC/Privates/*.{h,m,mm,swift}"
+    ss.private_header_files = "Sources/ViewModels_ObjC/Privates/*.h"
+    ss.framework = 'Foundation'
+    ss.dependency 'NDMVVM/Abstracts_ObjC'
+    ss.dependency 'NDLog/ObjC', '~> 0.0.6'
+    ss.dependency 'NDUtils/objc_ObjC', '~> 0.0.5'
+  end
+
+  s.subspec 'ViewModels_Swift' do |ss|
+    ss.dependency 'NDMVVM/ViewModels_ObjC'
   end
 
   s.subspec 'ViewModels' do |ss|
-    ss.source_files = "Sources/ViewModels/*.{h,m,mm,swift}", "Sources/ViewModels/Privates/*.{h,m,mm,swift}"
-    ss.private_header_files = "Sources/ViewModels/Privates/*.h"
-    ss.framework = 'Foundation'
-    ss.dependency 'NDMVVM/Abstracts'
+    ss.dependency 'NDMVVM/ViewModels_Swift'
+  end
+
+  s.subspec 'Views_ObjC' do |ss|
+    ss.source_files = "Sources/Views_ObjC/*.{h,m,mm,swift}"
+    ss.framework = 'Foundation', 'UIKit'
+    ss.dependency 'NDMVVM/Abstracts_ObjC'
     ss.dependency 'NDLog/ObjC', '~> 0.0.6'
-    ss.dependency 'NDUtils/objc', '~> 0.0.5'
+    ss.dependency 'NDManualObjects/ObjC', '~> 0.0.8'
+    ss.dependency 'NDUtils/objc_ObjC', '~> 0.0.5'
+  end
+
+  s.subspec 'Views_Swift' do |ss|
+    ss.source_files = "Sources/Views_Swift/*.{h,m,mm,swift}"
+    ss.dependency 'NDMVVM/Views_ObjC'
+    ss.dependency 'NDUtils/UIKit_Swift', '~> 0.0.5'
   end
 
   s.subspec 'Views' do |ss|
-    ss.source_files = "Sources/Views/*.{h,m,mm,swift}"
-    ss.framework = 'Foundation', 'UIKit'
-    ss.dependency 'NDMVVM/Abstracts'
-    ss.dependency 'NDLog/ObjC', '~> 0.0.6'
-    ss.dependency 'NDManualObjects/ObjC', '~> 0.0.8'
-    ss.dependency 'NDUtils/objc', '~> 0.0.5'
+    ss.dependency 'NDMVVM/Views_Swift'
   end
 
   s.subspec 'ObjC' do |ss|
-    ss.dependency 'NDMVVM/Core'
-    ss.dependency 'NDMVVM/Abstracts'
-    ss.dependency 'NDMVVM/ViewModels'
-    ss.dependency 'NDMVVM/Views'
+    ss.dependency 'NDMVVM/Core_ObjC'
+    ss.dependency 'NDMVVM/Abstracts_ObjC'
+    ss.dependency 'NDMVVM/ViewModels_ObjC'
+    ss.dependency 'NDMVVM/Views_ObjC'
   end
 
   s.subspec 'Swift' do |ss|
+    ss.dependency 'NDMVVM/Core_Swift'
     ss.dependency 'NDMVVM/Abstracts_Swift'
-    ss.dependency 'NDMVVM/ObjC'
+    ss.dependency 'NDMVVM/ViewModels_Swift'
+    ss.dependency 'NDMVVM/Views_Swift'
   end
 
   s.default_subspec = 'Swift'

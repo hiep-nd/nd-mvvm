@@ -10,7 +10,6 @@
 		11EF521B8B4A6FA21AA03AE4 /* Pods_Samples.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D1C8E5ADE8FEAD38291BE0A /* Pods_Samples.framework */; };
 		65B067A77F786076D6572E5A /* Pods_SamplesTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2DBC19A40039F1F906A9F78F /* Pods_SamplesTests.framework */; };
 		BA2131642559419D0001ADC8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA2131632559419D0001ADC8 /* AppDelegate.swift */; };
-		BA2131662559419D0001ADC8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA2131652559419D0001ADC8 /* SceneDelegate.swift */; };
 		BA2131682559419D0001ADC8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA2131672559419D0001ADC8 /* ViewController.swift */; };
 		BA21316B2559419D0001ADC8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA2131692559419D0001ADC8 /* Main.storyboard */; };
 		BA21316D2559419F0001ADC8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BA21316C2559419F0001ADC8 /* Assets.xcassets */; };
@@ -50,7 +49,6 @@
 		B1AAD35F8B89EAB6530DDBB3 /* Pods-SamplesTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SamplesTests.release.xcconfig"; path = "Target Support Files/Pods-SamplesTests/Pods-SamplesTests.release.xcconfig"; sourceTree = "<group>"; };
 		BA2131602559419D0001ADC8 /* Samples.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Samples.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA2131632559419D0001ADC8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		BA2131652559419D0001ADC8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		BA2131672559419D0001ADC8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		BA21316A2559419D0001ADC8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BA21316C2559419F0001ADC8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -149,7 +147,6 @@
 			isa = PBXGroup;
 			children = (
 				BA2131632559419D0001ADC8 /* AppDelegate.swift */,
-				BA2131652559419D0001ADC8 /* SceneDelegate.swift */,
 				BA2131672559419D0001ADC8 /* ViewController.swift */,
 				BA2131692559419D0001ADC8 /* Main.storyboard */,
 				BA21316C2559419F0001ADC8 /* Assets.xcassets */,
@@ -469,7 +466,6 @@
 			files = (
 				BA2131682559419D0001ADC8 /* ViewController.swift in Sources */,
 				BA2131642559419D0001ADC8 /* AppDelegate.swift in Sources */,
-				BA2131662559419D0001ADC8 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -577,7 +573,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -632,7 +628,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -692,7 +688,6 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6UKD7V9S9N;
 				INFOPLIST_FILE = SamplesTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -718,7 +713,6 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6UKD7V9S9N;
 				INFOPLIST_FILE = SamplesTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

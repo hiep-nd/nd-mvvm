@@ -8,9 +8,9 @@ target 'Samples' do
   # Pods for Samples
   pod 'NDMVVM', :path => '.'
   
-#  pod "NDLog/ObjC", :path => '../NDLog'
-#  pod "NDManualObjects/ObjC", :path => '../NDManualObjects'
-#  pod "NDUtils/ObjC", :path => '../NDUtils'
+  pod "NDLog/ObjC", :path => '../NDLog'
+  pod "NDManualObjects/ObjC", :path => '../NDManualObjects'
+  pod "NDUtils/ObjC", :path => '../NDUtils'
 
   target 'SamplesTests' do
     inherit! :search_paths
