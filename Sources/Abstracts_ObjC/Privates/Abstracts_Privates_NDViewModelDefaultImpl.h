@@ -6,6 +6,8 @@
 //  Copyright © 2020 Nguyen Duc Hiep. All rights reserved.
 //
 
+#ifdef __cplusplus
+
 #import <NDMVVM/Abstracts_NDView.h>
 #import <NDMVVM/Abstracts_NDViewModel.h>
 
@@ -28,3 +30,4 @@ inline RType RView(id<NDViewModel> self) {
   }
 
 NS_ASSUME_NONNULL_END
+#endif

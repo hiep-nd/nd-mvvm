@@ -88,4 +88,3 @@ NSArray<UIViewController*>* NDViewModelUIViewControllerPopToPreviousViewModel(
   return NDViewModelUIViewControllerPopToPreviousViewController(
       self, viewController, animated, completion);
 }
-

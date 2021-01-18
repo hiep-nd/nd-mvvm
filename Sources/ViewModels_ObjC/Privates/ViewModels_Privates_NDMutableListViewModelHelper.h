@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
+#ifdef __cplusplus
+
 #import <NDLog/NDLog.h>
 
 #import <list>
@@ -285,3 +287,5 @@ class NDMutableListViewModelHelper {
 };
 
 NS_ASSUME_NONNULL_END
+
+#endif

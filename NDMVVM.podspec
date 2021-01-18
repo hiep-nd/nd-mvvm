@@ -67,8 +67,9 @@ Pod::Spec.new do |s|
     ss.framework = 'Foundation', 'UIKit'
     ss.dependency 'NDMVVM/Abstracts_ObjC'
     ss.dependency 'NDLog/ObjC', '~> 0.0.6'
-    ss.dependency 'NDManualObjects/ObjC', '~> 0.0.8'
-    ss.dependency 'NDUtils/objc_ObjC', '~> 0.0.5'
+    ss.dependency 'NDManualObjects/ObjC', '~> 0.0.8.3'
+    ss.dependency 'NDUtils/UIKit_ObjC', '~> 0.0.5'
+    ss.dependency 'NDAutolayoutUtils/ObjC', '~> 0.0.7'
   end
 
   s.subspec 'Views_Swift' do |ss|
